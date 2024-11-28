@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
 
 /* General Styles */
-body {
+/* body {
     font-family: 'Parkinsans', sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -10,10 +10,10 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-}
+} */
 
 /* button style */
-.btn {
+/* .btn {
     display: inline-block;
     padding: 10px 20px;
     background-color: #608c93;
@@ -21,12 +21,15 @@ body {
     text-decoration: none;
     border-radius: 5px;
 
-}
+} */
 
-.sharp-corners {
+/* .sharp-corners {
     border-radius: 0;
-}
+} */
 
+#start-screen-container {
+    display: none;
+}
 /* Selection HTML */
 
 
