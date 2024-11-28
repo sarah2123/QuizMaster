@@ -167,3 +167,27 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
   - The next button is available once an answer is selected, it leads to the next question, if the quiz is finished it leads to the Results Screen.
 - Finally they arrive at the "Results Screen" and decide to play again or exit.
   - The play again button takes them straight to the Quiz Parameters Screen.
+
+**Information Achitecture:**
+- Start Screen
+  - Centralized layout with a title, tagline, and buttons for “Start” and “How to Play.”
+  - Modal popup for instructions when “How to Play” is clicked.
+- Quiz Parameters Screen
+  - Form layout with dropdowns for all quiz parameters.
+  - Disabled “Start Quiz” button until all parameters are filled.
+- Quiz Question Screen
+  - Header: Progress tracker and timer.
+  - Main Area: Question text and answer options.
+  - Footer: “Next” button.
+- Results Screen:
+  - Score display at the center.
+  - “Play Again” button below the score.
+### Skeleton
+**Desktop Wireframes**
+![Desktop Wireframe](/assets/media/desktop.png)
+
+**Tablet Wireframes**
+![Tablet Wireframe](/assets/media/tablet.png)
+
+**Mobile Wireframes**
+![Mobile Wireframe](/assets/media/mobile.png)
