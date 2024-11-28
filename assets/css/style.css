@@ -5,11 +5,11 @@
 
 :root {
     --primary-font: "Parkinsans", sans-serif;
-    --primary-color: #132A13;
-    --secondary-color: #4F772D;
-    --tertiary-color: #ECF39E;
-    --quarternary-color: #31572C;
-    --color: #90A955;
+    --primary-color: #133c55;
+    --secondary-color: #386fa4;
+    --tertiary-color: #91e5f6;
+    --quarternary-color: #59a5d8;
+    --color: #84d2f6;
 }
 
 /* Global Styles */
@@ -23,17 +23,27 @@ body {
 }
 
 h1,
-h2,
-h3, 
+#quiz-parameters-container h2,
+#logo,
 h4,
-.card-title {
+h4,
+strong {
     color: var(--primary-color);
+}
+
+#start-screen-container h2,
+#quiz-question-container h2,
+#quiz-question-container h3,
+#quiz-parameters-container h3,
+#results-container h2,
+#results-container h3  {
+    font-weight: 600;
 }
 
 .card {
     max-width: 600px; 
     width: 100%;
-    padding: 15px;
+    padding: 20px;
     border: none;
     background-color: var(--tertiary-color);
 }
@@ -53,30 +63,27 @@ h4,
     border: none;
     font-size: 18px;
     background-color: var(--quarternary-color);
+    font-weight: 600;
 }
 
+i {
+    margin-right: 8px;
+}
 
 /* Start Screen */
 
 h1 {
     font-weight: bold;
-    margin-bottom: 30px;
 }
 
 #start-screen-container button {
-    margin-top: 30px;
     padding: 10px 20px;
 }
 
 /* Quiz Parameters Screen */
 
 #quiz-parameters-container h2 {
-    margin-bottom: 15px;
     font-weight: bold;
-}
-
-#quiz-parameters-container h3 {
-    margin-bottom: 30px;
 }
 
 #quiz-parameters-container select {
@@ -84,6 +91,7 @@ h1 {
     border: none;
     font-size: 20px;
     background-color: var(--color);
+    font-weight: 500;
 }
 
 #quiz-parameters-container select:focus {
@@ -91,35 +99,23 @@ h1 {
 }
 
 #parameter-start-button {
-    margin-top: 15px;
     width: 150px;
-}
-
-#quiz-parameters-container {
-    display: none;
 }
 
 /* Quiz Question Screen */
 
 .section h4 {
     font-size: 16px;
-    margin-bottom: 15px;
     font-weight: bold;
-}
-
-#question {
-    margin-top: 30px;
 }
 
 #timer {
     border: 2px solid black;
     width: 80%;
     height: 25px;
-    margin-top: 15px;
 }
 
 #button-container {
-    margin-top: 30px;
     display: flex;
     flex-direction: column; 
     gap: 10px; 
@@ -130,30 +126,17 @@ h1 {
     border: none;
     font-size: 20px;
     line-height: 25px;
-    background-color: var(--color)
+    background-color: var(--color);
+    font-weight: 500;
 }
 
 #next-button {
-    margin-top: 30px;
     width: 100px;
-}
-
-
-#quiz-question-container {
-    display: none;
 }
 
 /* Results Screen */
 
-#play-again-button {
-    margin-top: 30px;
+#play-again-button {]
     width: 200px;
 }
 
-#results-container h2 {
-    margin-bottom: 30px;
-}
-
-#results-container {
-    display: none;
-}

@@ -213,6 +213,8 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 - Gitpod
 - Font Awesome
 - Balsamiq
+- favicon.io
+- Coolers
 
 ## Deployment
 - The site was deployed to GitHub pages. The steps to deploy are as follows: 
