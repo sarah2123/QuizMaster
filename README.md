@@ -126,3 +126,29 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 - Instant feedback on answers for improved learning.
 - Progress tracking to motivate continued participation.
 - Accessibility for users with disabilities.
+### Scope
+**Features:**
+- Ability for users to select the number of questions, category, difficulty level, and timer length.
+- Each question includes four clickable answer options.
+- Visual display showing the user’s progress (e.g., “Question 3 of 10”).
+- A visible countdown timer for each question.
+- Highlighting the selected answer in green for correct and red for incorrect, with the correct answer shown if the user gets it wrong.
+- Calculation and display of the user’s final score at the end of the quiz.
+- Ensures the quiz works on mobile, tablet, and desktop, with accessibility features for users with disabilities.
+
+**Functions:**
+- Ensures users select all quiz parameters before starting the quiz.
+- Fetches questions, answers, and other data dynamically from the API based on user-selected parameters.
+- Determines if a user’s selected answer is correct and adjusts the score accordingly.
+- Provides immediate feedback by highlighting the correct/incorrect answers and locking further interaction after an answer is chosen.
+- Starts and stops a countdown timer for each question, resetting it for the next question.
+- Updates the progress tracker after each question is completed.
+- Tallies the user’s correct answers and calculates the final score at the end of the quiz.
+- Resets parameters and questions when the user opts to play again.
+
+**Content:**
+- The content for the quiz will come from an API: <a href="https://opentdb.com/api_config.php" target="_blank">Open Trivia Database</a>
+- The API will need to handle, display  and interact with the following:
+  - Text-based questions and four possible answer options for each.
+  - Correct answer identifier.
+  - List of quiz categories (e.g., general knowledge, animals, geography, music).
