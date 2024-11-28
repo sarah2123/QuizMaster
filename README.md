@@ -114,3 +114,15 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 - As a user, I want to see my final score so that i can understand my performance.
 - As a user with assistive needs, I want the quiz to be accessible with screen readers so that i can also play.
 - As a user, I want the quiz to look good and work on any device so that i can play on any device.
+### Strategy
+**Site Objectives:**
+- Provide an engaging and interactive way to test users’ knowledge.
+- Offer customizable quizzes to cater to varied interests and skill levels.
+- Support learning and entertainment with accessibility and responsiveness in mind.
+
+**User Needs:**
+- Clear, easy-to-use navigation and interaction.
+- Variety in content (categories, difficulties, timers).
+- Instant feedback on answers for improved learning.
+- Progress tracking to motivate continued participation.
+- Accessibility for users with disabilities.
