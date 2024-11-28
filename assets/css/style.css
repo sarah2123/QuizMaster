@@ -26,7 +26,6 @@ h1,
 #quiz-parameters-container h2,
 #logo,
 h4,
-h4,
 strong {
     color: var(--primary-color);
 }
@@ -35,7 +34,6 @@ strong {
 #quiz-question-container h2,
 #quiz-question-container h3,
 #quiz-parameters-container h3,
-#results-container h2,
 #results-container h3  {
     font-weight: 600;
 }
@@ -140,3 +138,10 @@ h1 {
     width: 200px;
 }
 
+#results-container h2 {
+    font-weight: 600;
+}
+
+div #logo {
+    font-weight: bold;
+}

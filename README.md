@@ -201,15 +201,15 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 ![Mobile Wireframe](/assets/media/mobile.png)
 ### Surface
 **Visual Design**
+- Parkinsan Font and Blue Colour Scheme
 
 **Typography**
+
 ![Parkinsan Font](/assets/media/parkinsanFont.png)
 
 **Colour Scheme**
-![Colour Scheme](/assets/media/colours.png)
 
-**Imagery**
-![Mobile Wireframe](/assets/media/imagery.png)
+![Colour Scheme](/assets/media/Colors.png)
 
 ## Technologies Used
 - HTML5
@@ -223,6 +223,7 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 - Balsamiq
 - favicon.io
 - Coolers
+- Chrome DevTools
 
 ## Deployment
 - The site was deployed to GitHub pages. The steps to deploy are as follows: 
