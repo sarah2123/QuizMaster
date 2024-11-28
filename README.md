@@ -234,3 +234,9 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 ### Browser Testing
 ### Responsiveness Testing
 ### Known Bugs
+
+## Credits
+### Content
+- Chatgpt
+### Media
+### Acknowledgements
