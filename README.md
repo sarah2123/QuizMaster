@@ -89,3 +89,15 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
   - **Feature Description:** A "Play Again" button allows users to reset the quiz and return to the parameter selection screen. The button has a hover effect.
   - **Responsiveness:** The button is styled to be easily clickable or tappable, adjusting appropriately for all screen sizes.
   - **Value to user:** Encourages replayability, giving users the opportunity to improve their score or try different quiz settings without refreshing the page.
+
+### Future Features
+- Allow users to review their answers after the quiz.
+- A leaderboard to show top scores.
+- Allow users to save their progress and resume later.
+- Allow users to share their results and provide feedback.
+- Reward users with bonus points for streaks or quick answers.
+- Add sound effects or background music.
+- Add badges or achievements.
+- Add new timer modes for variety (e.g. Sudden Death: One incorrect answer ends the quiz.).
+- Allow user to enter name and use throughout quiz to make it more personalised.
+- Add a contact form for users to report bugs.
