@@ -191,3 +191,26 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 
 **Mobile Wireframes**
 ![Mobile Wireframe](/assets/media/mobile.png)
+### Surface
+**Visual Design**
+
+**Typography**
+![Parkinsan Font](/assets/media/parkinsanFont.png)
+
+**Colour Scheme**
+![Colour Scheme](/assets/media/colours.png)
+
+**Imagery**
+![Mobile Wireframe](/assets/media/imagery.png)
+
+## Technologies Used
+- HTML5
+- CSS3
+- Javascript
+- Bootstrap
+- Git
+- Github
+- Gitpod
+- Font Awesome
+- Balsamiq
+
