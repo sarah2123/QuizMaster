@@ -5,10 +5,10 @@
 
 :root {
     --primary-font: "Parkinsans", sans-serif;
-    --primary-color:
-    --secondary-color: 
-    --tertiary-color:
-    --quarternary-color:
+    --primary-color: ;
+    --secondary-color: ;
+    --tertiary-color: ;
+    --quarternary-color: ;
 }
 
 /* Global Styles */
@@ -23,7 +23,7 @@ html, body {
     max-width: 600px; 
     width: 100%;
     padding: 15px; 
-    border: 2px solid black;           
+    border: 2px solid black;  
 }
 
 .section {
@@ -32,6 +32,16 @@ html, body {
     align-items: center;    
     height: 100vh;   
 }
+
+#start-screen-container button,
+#parameter-start-button,
+#next-button,
+#play-again-button {
+    text-align: center;
+    border: 2px Solid Black;
+    font-size: 18px;
+}
+
 
 /* Start Screen */
 
@@ -42,10 +52,6 @@ h1 {
 
 #start-screen-container button {
     margin-top: 30px;
-    width: 150px;
-    text-align: center;
-    border: 2px Solid Black;
-    font-size: 18px;
 }
 
 /* Quiz Parameters Screen */
@@ -72,9 +78,10 @@ h1 {
 #parameter-start-button {
     margin-top: 15px;
     width: 150px;
-    text-align: center;
-    border: 2px Solid Black;
-    font-size: 18px;
+}
+
+#quiz-parameters-container {
+    display: ;
 }
 
 /* Quiz Question Screen */
@@ -118,9 +125,6 @@ h1 {
 #next-button {
     margin-top: 30px;
     width: 100px;
-    text-align: center;
-    border: 2px Solid Black;
-    font-size: 18px;
 }
 
 
@@ -133,9 +137,6 @@ h1 {
 #play-again-button {
     margin-top: 30px;
     width: 200px;
-    text-align: center;
-    border: 2px Solid Black;
-    font-size: 18px;
 }
 
 #results-container h2 {
