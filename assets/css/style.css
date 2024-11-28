@@ -1,2 +1,32 @@
 /* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Parkinsans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* button style */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #608c93;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+
+}
+
+.sharp-corners {
+    border-radius: 0;
+}
+
+/* Selection HTML */
+
+
