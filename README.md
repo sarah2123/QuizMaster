@@ -1,131 +1,244 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# QuizMaster
+![Homepage banner](/media/banner.png)
+<p align="center">
+    <a href="" target="_blank">Deployed Project Link</a>
+</p>
 
-Welcome Sarah Hussain,
+## Project Overview
+### Introduction
+Welcome to **QuizMaster**, a dynamic and engaging quiz platform designed to entertain, educate, and challenge users of all ages. QuizMaster allows users to customize their quiz experience by selecting the number of questions, categories like general knowledge or geography, difficulty levels, and time limits, making it versatile for both casual users and avid quiz enthusiasts.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+This platform aims to provide an enjoyable way to test and expand knowledge while catering to diverse interests and learning preferences. By offering immediate feedback on answers, tracking progress, and displaying results, QuizMaster serves as both an educational tool and a source of entertainment. Whether you're looking to learn something new, practice for a trivia night, or just have fun, QuizMaster is the ideal companion. With a clean, responsive design powered by Bootstrap and dynamic question content from an API, this quiz application ensures a seamless and enriching experience for everyone.
+### Site Goals
+- Provide an interactive and customizable quiz platform for users to test their knowledge.
+- Enable users to select quiz parameters such as the number of questions, category, difficulty, and time limits.
+- Display real-time feedback to enhance learning and engagement.
+- Ensure the application is responsive and works seamlessly across mobile, tablet, and desktop devices.
+- Incorporate accessibility features to make the platform usable for a wide audience.
+- Use dynamic data from an API to deliver fresh and varied quiz content.
+### Mobile / Tablet / Desktop View
+![Responsive Mockup](/media/responsive-mockup.png)
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+## Features
+### Existing Features
+**Start Screen**
+- **Title of the Quiz and Brief Tagline**
+  - **Feature Description:** The quiz title and a brief tagline provide a clear introduction to the theme and purpose of the quiz, setting expectations for users before they begin.
+  - **Responsiveness:** Both elements are styled to adapt seamlessly to different screen sizes, ensuring readability on mobile, tablet, and desktop devices.
+  - **Value to User:** These elements create an inviting first impression, giving users confidence and clarity about the content they are engaging with.
+  
+- **How to Play Button and Modal with Instructions on How to Play**
+  - **Feature Description:** A prominently placed "How to Play" button opens a modal with clear and concise instructions on using the platform, answering common questions users might have. The button has a hover effect and the modal closes when the user clicks anywhere on the screen or clicks the close button.
+  - **Responsiveness:** The button and modal are designed to scale and center correctly on all devices, with legible text and intuitive touch/click functionality. 
+  - **Value to User:** This feature removes potential confusion, ensuring users of all experience levels can navigate and enjoy the quiz without frustration.
 
-## Gitpod Reminders
+**Quiz Parameters Screen**
+- **Amount of Questions Dropdown Menu**
+  - **Feature Description:** Users can choose the number of quiz questions from a dropdown menu, customizing the length of their quiz session. They can choose either 5, 10, 15 or 20 questions.
+  - **Responsiveness:** The dropdown menu is accessible on all device types, ensuring smooth functionality and intuitive navigation.
+  - **Value to User:** Provides flexibility, allowing users to tailor their quiz experience to the time they have available or their preferred challenge level.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- **Quiz Category Dropdown Menu**
+  -  **Feature Description:** Users can choose the category of the quiz from a dropdown menu, tailoring the content to their interests or expertise. They can choose from many topics including General Knowledge, Geography and Entertainment.
+  - **Responsiveness:** The dropdown menu is accessible on all device types, ensuring smooth functionality and intuitive navigation.
+  - **Value to User:** Makes the quiz engaging and personalized, enhancing user satisfaction by focusing on their preferred topics.
 
-`python3 -m http.server`
+- **Difficulty Level Dropdown Menu**
+  - **Feature Description:**  Users can select the difficulty of their quiz, ensuring an appropriate challenge for beginners, intermediates, or experts. They can choose from Easy, Medium or Hard.
+  - **Responsiveness:** The dropdown menu is accessible on all device types, ensuring smooth functionality and intuitive navigation.
+  - **Value to User:** Increases accessibility and enjoyment by accommodating varying levels of expertise and challenge preferences.
 
-A blue button should appear to click: _Make Public_,
+- **Timer Dropdown Menu**
+  - **Feature Description:**  Users can select a time limit for each question from a dropdown menu, choosing between 10, 15, or 20 seconds.
+  - **Responsiveness:** The dropdown menu is accessible on all device types, ensuring smooth functionality and intuitive navigation.
+  - **Value to User:** Adds customization to the quiz experience, allowing users to tailor the level of time-based challenge to their preferences or skill level.
 
-Another blue button should appear to click: _Open Browser_.
+- **Start Button**
+  - **Feature Description:** The "Start" button remains disabled until all required quiz parameters are chosen, preventing incomplete setups. There is a hover effect on the start button.
+  - **Responsiveness:** The button is in the middle on larger screens and to the right on smaller screens so it's easier to access.
+  - **Value to user:** Avoids user frustration by ensuring the quiz starts only with valid settings, improving usability and reducing errors.
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+**Quiz Question Screen**
+- **Progress Tracker**
+  - **Feature Description:**  A progress tracker displays the current question number relative to the total, helping users gauge their progress through the quiz. 
+  - **Responsiveness:** The tracker is visible across all device types.
+  - **Value to user:** Keeps users informed about their progress, maintaining motivation and reducing the likelihood of disengagement.
 
-A blue button should appear to click: _Make Public_,
+- **Timer Tracker**
+  - **Feature Description:** : A visual timer bar at the top of the screen decreases in length as the selected time runs out, offering a graphical representation of remaining time.
+  - **Responsiveness:**  The bar dynamically adjusts its width and placement to fit various screen sizes while maintaining visibility and smooth animation.
+  - **Value to user:**  Provides a clear time constraint, adding urgency and ensuring users stay focused and engaged throughout the quiz.
 
-Another blue button should appear to click: _Open Browser_.
+- **Quiz Question with Four Options**
+  - **Feature Description:**  Each question is accompanied by four clickable answer options, providing a clear and standardized format. The options turn green when right and red when wrong. The correct answer is displayed in green if answered incorrectly. The options have a hover effect.
+  - **Responsiveness:** Options are styled as buttons that resize and remain easily tappable or clickable on any device.
+  - **Value to user:** Ensures clarity and ease of interaction, providing a straightforward way to select answers, check answers and proceed through the quiz.
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- **Next Button**
+  - **Feature Description:** The "Next" button allows users to move to the next question, but it only becomes active after selecting an answer. On the last question, it directs users to the results screen. The button has a hover effect.
+  - **Responsiveness:** The button is in the middle on larger screens and to the right on smaller screens so it's easier to access.
+  - **Value to user:**  Encourages thoughtful interaction by requiring users to select an answer before moving on, enhancing the overall learning experience.
 
-To log into the Heroku toolbelt CLI:
+**Result Screen**
+- **Display Final Score**
+  - **Feature Description:** The final screen displays the user’s total score, summarizing their performance in a clear and visually prominent way.
+  - **Responsiveness:** The score display adapts to various screen sizes, ensuring readability and aesthetic appeal on any device.
+  - **Value to user:** Provides users with immediate feedback on their overall performance, offering a sense of accomplishment and closure to the experience.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- **Play Again Button**
+  - **Feature Description:** A "Play Again" button allows users to reset the quiz and return to the parameter selection screen. The button has a hover effect.
+  - **Responsiveness:** The button is styled to be easily clickable or tappable, adjusting appropriately for all screen sizes.
+  - **Value to user:** Encourages replayability, giving users the opportunity to improve their score or try different quiz settings without refreshing the page.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+### Future Features
+- Allow users to review their answers after the quiz.
+- A leaderboard to show top scores.
+- Allow users to save their progress and resume later.
+- Allow users to share their results and provide feedback.
+- Reward users with bonus points for streaks or quick answers.
+- Add sound effects or background music.
+- Add badges or achievements.
+- Add new timer modes for variety (e.g. Sudden Death: One incorrect answer ends the quiz.).
+- Allow user to enter name and use throughout quiz to make it more personalised.
+- Add a contact form for users to report bugs.
 
-### Connecting your Mongo database
+## Project Planning - UX/UI
+### User Stories
+- As a user, I want to access instructions so that I can understand the rules.
+- As a user, I want to select the number of questions, category, and difficulty level so that I can customise the quiz to suit my preferences and interests.
+- As a user, I want to choose the timer duration so that i can adjust the challenge.
+- As a user, I want to see my progress so that i can understand how far I’ve gone in the quiz.
+- As a user, I want to see a countdown timer so that i can track the remaining time for each question.
+- As a user, I want to see a clear question and options so that I can interact with the quiz.
+- As a user, I want to know if my answer is correct or incorrect immediately so that i know what the correct answer is.
+- As a user, I want to see my final score so that i can understand my performance.
+- As a user with assistive needs, I want the quiz to be accessible with screen readers so that i can also play.
+- As a user, I want the quiz to look good and work on any device so that i can play on any device.
+### Strategy
+**Site Objectives:**
+- Provide an engaging and interactive way to test users’ knowledge.
+- Offer customizable quizzes to cater to varied interests and skill levels.
+- Support learning and entertainment with accessibility and responsiveness in mind.
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+**User Needs:**
+- Clear, easy-to-use navigation and interaction.
+- Variety in content (categories, difficulties, timers).
+- Instant feedback on answers for improved learning.
+- Progress tracking to motivate continued participation.
+- Accessibility for users with disabilities.
+### Scope
+**Features:**
+- Ability for users to select the number of questions, category, difficulty level, and timer length.
+- Each question includes four clickable answer options.
+- Visual display showing the user’s progress (e.g., “Question 3 of 10”).
+- A visible countdown timer for each question.
+- Highlighting the selected answer in green for correct and red for incorrect, with the correct answer shown if the user gets it wrong.
+- Calculation and display of the user’s final score at the end of the quiz.
+- Ensures the quiz works on mobile, tablet, and desktop, with accessibility features for users with disabilities.
 
-------
+**Functions:**
+- Ensures users select all quiz parameters before starting the quiz.
+- Fetches questions, answers, and other data dynamically from the API based on user-selected parameters.
+- Determines if a user’s selected answer is correct and adjusts the score accordingly.
+- Provides immediate feedback by highlighting the correct/incorrect answers and locking further interaction after an answer is chosen.
+- Starts and stops a countdown timer for each question, resetting it for the next question.
+- Updates the progress tracker after each question is completed.
+- Tallies the user’s correct answers and calculates the final score at the end of the quiz.
+- Resets parameters and questions when the user opts to play again.
 
-## Release History
+**Content:**
+- The content for the quiz will come from an API: <a href="https://opentdb.com/api_config.php" target="_blank">Open Trivia Database</a>
+- The API will need to handle, display  and interact with the following:
+  - Text-based questions and four possible answer options for each.
+  - Correct answer identifier.
+  - List of quiz categories (e.g., general knowledge, animals, geography, music).
+### Structure
+**Interaction Design:**
+- User starts at the "Start Screen".
+  - They can select the how to play button and a modal with instructions pops up.
+  - They can close the modal by clicking the close button or anywhere outside of the modal.
+  - The start button takes them to the Quiz Parameters Screen.
+- They then proceed to "Quiz Parameters Screen".
+  - The can click the dropdown menus to choose the number of questions, difficulty level, category, and timer on the quiz.
+  - The start button is available once all parameters are selected and leads them to the Quiz Question Screen.
+- Once at the "Quiz Question Screen" they remain here until all questions have been answered.
+  - The user can select the correct answer from 4 options.
+  - Once an answer has been selected it turns green if correct or red if incorrect.
+  - The next button is available once an answer is selected, it leads to the next question, if the quiz is finished it leads to the Results Screen.
+- Finally they arrive at the "Results Screen" and decide to play again or exit.
+  - The play again button takes them straight to the Quiz Parameters Screen.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+**Information Achitecture:**
+- Start Screen
+  - Centralized layout with a title, tagline, and buttons for “Start” and “How to Play.”
+  - Modal popup for instructions when “How to Play” is clicked.
+- Quiz Parameters Screen
+  - Form layout with dropdowns for all quiz parameters.
+  - Disabled “Start Quiz” button until all parameters are filled.
+- Quiz Question Screen
+  - Header: Progress tracker and timer.
+  - Main Area: Question text and answer options.
+  - Footer: “Next” button.
+- Results Screen:
+  - Score display at the center.
+  - “Play Again” button below the score.
+### Skeleton
+**Desktop Wireframes**
+![Desktop Wireframe](/assets/media/desktop.png)
 
-**June 18, 2024,** Add Mongo back into template
+**Tablet Wireframes**
+![Tablet Wireframe](/assets/media/tablet.png)
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+**Mobile Wireframes**
+![Mobile Wireframe](/assets/media/mobile.png)
+### Surface
+**Visual Design**
 
-**May 28 2024:** Fix Mongo and Links installs
+**Typography**
+![Parkinsan Font](/assets/media/parkinsanFont.png)
 
-**April 26 2024:** Update node version to 16
+**Colour Scheme**
+![Colour Scheme](/assets/media/colours.png)
 
-**September 20 2023:** Update Python version to 3.9.17.
+**Imagery**
+![Mobile Wireframe](/assets/media/imagery.png)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Technologies Used
+- HTML5
+- CSS3
+- Javascript
+- Bootstrap
+- Git
+- Github
+- Gitpod
+- Font Awesome
+- Balsamiq
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+## Deployment
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - Login to github and access your repository.
+  - In your GitHub repository, navigate to the settings tab.
+  - From the settings tab navigate to the option 'Pages'.
+  - From the source section drop-down menu, select 'deploy from a branch'.
+  - From the branch section, use the dropdown menu to select the 'main' branch.
+  - From the next drop-down menu select 'root', then  click save.
+  - Wait a few minutes and refresh your page and the deployed link should be available.
+- The live link can be found here - 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Testing
+### HTML
+### CSS
+### JavaScript
+### Lighthouse 
+### WCAG Contrast Checker
+### Browser Testing
+### Responsiveness Testing
+### Known Bugs
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Credits
+### Content
+- Chatgpt
+### Media
+### Acknowledgements
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+## AI Usage
