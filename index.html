@@ -15,31 +15,132 @@
 </head>
 
 <body>
-    <!-- Title and intro -->
-    <div class="container">
+    <!-- Start Screen -->
+    <div class="container-fluid section" id="start-screen-container">
         <div class="row">
-            <div class="col-12 text-center mt-5">
-                <h1>
-                    Quiz Master
-                </h1>
-                <p>
-                    Challenge your Mind
-                </p>
-                <p>
-                    One step at a time!
-                </p>
-                <!-- Start Button -->
-                <button>
-                    <a href="selection.html">
-                        Start
-                    </a>
-                </button>
-                <!-- How to Play button -->
-                <button>
-                    <a href="howtoplay.html">
-                        How to Play
-                    </a>
-                </button>
+            <div class="col-12">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div>
+                            <h1>QuizMaster</h1>
+                            <h3>Challenge Your Mind, One Question at a Time!</h3>
+                        </div>
+                        <div class="d-flex justify-content-center column-gap-3">
+                            <button class="btn" id="start-button">Start</button>
+                            <button class="btn" id="how-to-play-button">How to Play</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Parameters Screen-->
+    <div class="container-fluid section" id="quiz-parameters-container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div>
+                            <h2>QuizMaster</h2>
+                            <h3>Customise your quiz using the dropdown menus</h3>
+                        </div>
+                        <select class="form-select" aria-label="select number of questions">
+                            <option selected>Select Number</option>
+                            <option value="1">5</option>
+                            <option value="2">10</option>
+                            <option value="3">15</option>
+                            <option value="4">20</option>
+                        </select>
+                        <select class="form-select" aria-label="select category of questions">
+                            <option selected>Select Category</option>
+                            <option value="1">General Knowledge</option>
+                            <option value="2">Entertainment: Books</option>
+                            <option value="3">Entertainment: Film</option>
+                            <option value="4">Entertainment: Music</option>
+                            <option value="5">Entertainment: Television</option>
+                            <option value="6">Sports</option>
+                            <option value="7">Geography</option>
+                            <option value="8">History</option>
+                            <option value="9">Celebrity</option>
+                            <option value="10">Animals</option>
+                            <option value="11">Politics</option>
+                            <option value="12">Art</option>
+                        </select>
+                        <select class="form-select" aria-label="select difficulty of questions">
+                            <option selected>Select Difficulty Level</option>
+                            <option value="1">Easy</option>
+                            <option value="2">Medium</option>
+                            <option value="3">Hard</option>
+                        </select>
+                        <select class="form-select" aria-label="select timer for each question">
+                            <option selected>Select Timer</option>
+                            <option value="1">10s</option>
+                            <option value="2">15s</option>
+                            <option value="3">20s</option>
+                        </select>
+                        <div>
+                            <button class="btn" id="parameter-start-button">Start</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Question Screen-->
+    <div class="container-fluid section" id="quiz-question-container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-start">
+                            <h4>QuizMaster</h4>
+                        </div>
+                        <div>
+                            <h3 id="progress-tracker">Question 1/10</h3>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <div id="timer"></div>
+                        </div>
+                        <div>
+                            <h2 class="card-title" id="question">What are the main colours on the flag of Spain?</h2>
+                        </div>
+                        <div id="button-container">
+                            <button class="btn" id="answer-a">Black and Yellow</button>
+                            <button class="btn" id="answer-b">Blue and White</button>
+                            <button class="btn" id="answer-c">Green and White</button>
+                            <button class="btn" id="answer-d">Red and Yellow</button>
+                        </div>
+                        <div>
+                            <button class="btn float-end" id="next-button">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Screen-->
+    <div class="container-fluid section" id="results-container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-start">
+                            <h4>QuizMaster</h4>
+                        </div>
+                        <div>
+                            <h2 class="card-title">You scored <strong id="score">8</strong> out of <strong
+                                    id="total-questions">10</strong></h2>
+                            <h3 class="card-title">Great Job! You answered <strong
+                                    id="score-percentage">80</strong><strong>%</strong> of the questions correctly.</h3>
+                        </div>
+                        <div>
+                            <button class="btn" id="play-again-button">Play Again</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

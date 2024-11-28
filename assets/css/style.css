@@ -1,32 +1,148 @@
 /* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
 
-/* General Styles */
-body {
-    font-family: 'Parkinsans', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    background-color: #f4f4f4;
+/* CSS Variables */
+
+:root {
+    --primary-font: "Parkinsans", sans-serif;
+    --primary-color: ;
+    --secondary-color: ;
+    --tertiary-color: ;
+    --quarternary-color: ;
+}
+
+/* Global Styles */
+
+html, body {
     margin: 0;
     padding: 0;
+    font-family: var(--primary-font);
 }
 
-/* button style */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #608c93;
-    color: #fff;
-    text-decoration: none;
+.card {
+    max-width: 600px; 
+    width: 100%;
+    padding: 15px; 
+    border: 2px solid black;  
+}
+
+.section {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    height: 100vh;   
+}
+
+#start-screen-container button,
+#parameter-start-button,
+#next-button,
+#play-again-button {
+    text-align: center;
+    border: 2px Solid Black;
+    font-size: 18px;
+}
+
+
+/* Start Screen */
+
+h1 {
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#start-screen-container button {
+    margin-top: 30px;
+}
+
+/* Quiz Parameters Screen */
+
+#quiz-parameters-container h2 {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#quiz-parameters-container h3 {
+    margin-bottom: 30px;
+}
+
+#quiz-parameters-container select {
+    margin-bottom: 15px;
+    border: 2px solid black;
+    font-size: 20px;
+}
+
+#quiz-parameters-container select:focus {
+   box-shadow: none;
+}
+
+#parameter-start-button {
+    margin-top: 15px;
+    width: 150px;
+}
+
+#quiz-parameters-container {
+    display: ;
+}
+
+/* Quiz Question Screen */
+
+.section h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#question {
+    margin-top: 30px;
+}
+
+#timer {
+    border: 2px solid black;
+    width: 80%;
+    height: 25px;
+    margin-top: 15px;
+}
+
+#button-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+#button-container .btn {
     border-radius: 5px;
-
+    border: 2px solid black;
+    font-size: 20px;
+    line-height: 25px;
 }
 
-.sharp-corners {
-    border-radius: 0;
+#button-container .button:hover,
+#next-button:hover {
+    border: 2px solid black;
 }
 
-/* Selection HTML */
+#next-button {
+    margin-top: 30px;
+    width: 100px;
+}
 
 
+#quiz-question-container {
+    display: ;
+}
+
+/* Results Screen */
+
+#play-again-button {
+    margin-top: 30px;
+    width: 200px;
+}
+
+#results-container h2 {
+    margin-bottom: 30px;
+}
+
+#results-container {
+    display: ;
+}
