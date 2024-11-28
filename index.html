@@ -16,34 +16,26 @@
 
 <body>
     <!-- Title and intro -->
-    <div class="container" id="start-screen-container">
+    <div class="container-fluid section" id="start-screen-container">
         <div class="row">
-            <div class="col-12 text-center mt-5">
-                <h1>
-                    Quiz Master
-                </h1>
-                <p>
-                    Challenge your Mind
-                </p>
-                <p>
-                    One step at a time!
-                </p>
-                <!-- Start Button -->
-                <button>
-                    <a href="selection.html">
-                        Start
-                    </a>
-                </button>
-                <!-- How to Play button -->
-                <button>
-                    <a href="howtoplay.html">
-                        How to Play
-                    </a>
-                </button>
+            <div class="col-12">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div>
+                            <h1>QuizMaster</h1>
+                            <h3>Challenge your Mind, One step at a time!</h3>
+                        </div>
+                        <div>
+                            <button class="btn" id="start-button">Start</button>
+                            <button class="btn" id="how-to-play-button">How to Play</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- Quiz Question Screen-->
     <div class="container-fluid section" id="quiz-question-container">
         <div class="row">
             <div class="col-12">
@@ -86,8 +78,10 @@
                             <h4>QuizMaster</h4>
                         </div>
                         <div>
-                            <h2 class="card-title">You scored <strong id="score">8</strong> out of <strong id="total-questions">10</strong></h2>
-                            <h3 class="card-title">Great Job! You answered <strong id="score-percentage">80</strong><strong>%</strong> of the questions correctly.</h3>
+                            <h2 class="card-title">You scored <strong id="score">8</strong> out of <strong
+                                    id="total-questions">10</strong></h2>
+                            <h3 class="card-title">Great Job! You answered <strong
+                                    id="score-percentage">80</strong><strong>%</strong> of the questions correctly.</h3>
                         </div>
                         <div>
                             <button class="btn" id="play-again-button">Play Again</button>
