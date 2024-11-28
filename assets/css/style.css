@@ -19,7 +19,19 @@ html, body * {
     font-family: var(--primary-font);
 }
 
+.card {
+    max-width: 600px; 
+    width: 100%;
+    padding: 15px; 
+    border: 2px solid black;           
+}
 
+.section {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    height: 100vh;   
+}
 
 
 
