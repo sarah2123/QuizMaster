@@ -1,5 +1,5 @@
 # QuizMaster
-![Homepage banner](/media/banner.png)
+![Homepage banner](/assets/media/banner.png)
 <p align="center">
     <a href="" target="_blank">Deployed Project Link</a>
 </p>
@@ -22,6 +22,8 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 ## Features
 ### Existing Features
 **Start Screen**
+
+  ![Start Screen](/assets/media/StartScreen.png)
 - **Title of the Quiz and Brief Tagline**
   - **Feature Description:** The quiz title and a brief tagline provide a clear introduction to the theme and purpose of the quiz, setting expectations for users before they begin.
   - **Responsiveness:** Both elements are styled to adapt seamlessly to different screen sizes, ensuring readability on mobile, tablet, and desktop devices.
@@ -33,6 +35,8 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
   - **Value to User:** This feature removes potential confusion, ensuring users of all experience levels can navigate and enjoy the quiz without frustration.
 
 **Quiz Parameters Screen**
+  
+  ![Quiz Parameters Screen](/assets/media/QuizParametersScreen.png)
 - **Amount of Questions Dropdown Menu**
   - **Feature Description:** Users can choose the number of quiz questions from a dropdown menu, customizing the length of their quiz session. They can choose either 5, 10, 15 or 20 questions.
   - **Responsiveness:** The dropdown menu is accessible on all device types, ensuring smooth functionality and intuitive navigation.
@@ -59,6 +63,8 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
   - **Value to user:** Avoids user frustration by ensuring the quiz starts only with valid settings, improving usability and reducing errors.
 
 **Quiz Question Screen**
+
+ ![Quiz Question Screen](/assets/media/QuizQuestionScreen.png)
 - **Progress Tracker**
   - **Feature Description:**  A progress tracker displays the current question number relative to the total, helping users gauge their progress through the quiz. 
   - **Responsiveness:** The tracker is visible across all device types.
@@ -80,6 +86,8 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
   - **Value to user:**  Encourages thoughtful interaction by requiring users to select an answer before moving on, enhancing the overall learning experience.
 
 **Result Screen**
+
+  ![Result Screen](/assets/media/ResultsScreen.png)
 - **Display Final Score**
   - **Feature Description:** The final screen displays the user’s total score, summarizing their performance in a clear and visually prominent way.
   - **Responsiveness:** The score display adapts to various screen sizes, ensuring readability and aesthetic appeal on any device.
