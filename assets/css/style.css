@@ -35,6 +35,18 @@ html, body * {
 
 /* Start Screen */
 
+h1 {
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#start-screen-container button {
+    margin-top: 30px;
+    width: 200px;
+    text-align: center;
+    border: 2px Solid Black;
+    font-size: 18px;
+}
 
 /* Quiz Question Screen */
 
@@ -104,28 +116,3 @@ html, body * {
 #results-container {
     display: ;
 }
-
-
-
-
-/* General Styles */
-
-
-/* button style */
-/* .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #608c93;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-
-} */
-
-/* .sharp-corners {
-    border-radius: 0;
-} */
-
-/* Selection HTML */
-
-
