@@ -240,3 +240,5 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 - Chatgpt
 ### Media
 ### Acknowledgements
+
+## AI Usage
