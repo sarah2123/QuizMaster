@@ -224,3 +224,13 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
   - From the next drop-down menu select 'root', then  click save.
   - Wait a few minutes and refresh your page and the deployed link should be available.
 - The live link can be found here - 
+
+## Testing
+### HTML
+### CSS
+### JavaScript
+### Lighthouse 
+### WCAG Contrast Checker
+### Browser Testing
+### Responsiveness Testing
+### Known Bugs
