@@ -214,3 +214,13 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 - Font Awesome
 - Balsamiq
 
+## Deployment
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - Login to github and access your repository.
+  - In your GitHub repository, navigate to the settings tab.
+  - From the settings tab navigate to the option 'Pages'.
+  - From the source section drop-down menu, select 'deploy from a branch'.
+  - From the branch section, use the dropdown menu to select the 'main' branch.
+  - From the next drop-down menu select 'root', then  click save.
+  - Wait a few minutes and refresh your page and the deployed link should be available.
+- The live link can be found here - 
