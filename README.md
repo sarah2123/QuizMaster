@@ -152,3 +152,18 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
   - Text-based questions and four possible answer options for each.
   - Correct answer identifier.
   - List of quiz categories (e.g., general knowledge, animals, geography, music).
+### Structure
+**Interaction Design:**
+- User starts at the "Start Screen".
+  - They can select the how to play button and a modal with instructions pops up.
+  - They can close the modal by clicking the close button or anywhere outside of the modal.
+  - The start button takes them to the Quiz Parameters Screen.
+- They then proceed to "Quiz Parameters Screen".
+  - The can click the dropdown menus to choose the number of questions, difficulty level, category, and timer on the quiz.
+  - The start button is available once all parameters are selected and leads them to the Quiz Question Screen.
+- Once at the "Quiz Question Screen" they remain here until all questions have been answered.
+  - The user can select the correct answer from 4 options.
+  - Once an answer has been selected it turns green if correct or red if incorrect.
+  - The next button is available once an answer is selected, it leads to the next question, if the quiz is finished it leads to the Results Screen.
+- Finally they arrive at the "Results Screen" and decide to play again or exit.
+  - The play again button takes them straight to the Quiz Parameters Screen.
