@@ -33,12 +33,67 @@ html, body * {
     height: 100vh;   
 }
 
+/* Quiz Question Screen */
+
+.section h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#question {
+    margin-top: 30px;
+}
+
+#button-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+#button-container .btn {
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+#button-container .button:hover,
+#next-button:hover {
+    border: 2px solid black;
+}
+
+#next-button {
+    margin-top: 30px;
+    width: 100px;
+    text-align: center;
+    border: 2px Solid Black;
+    font-size: 18px;
+}
 
 
+#quiz-question-container {
+    display: none;
+}
 
+/* Results Screen */
 
+#play-again-button {
+    margin-top: 30px;
+    width: 200px;
+    text-align: center;
+    border: 2px Solid Black;
+    font-size: 18px;
+}
 
+#results-container h2 {
+    margin-bottom: 30px;
+}
 
+#results-container {
+    display: none;
+}
 
 
 
