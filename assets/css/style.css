@@ -113,7 +113,9 @@ h1 {
 }
 
 #parameter-start-button {
-    width: 150px;
+    width: 120px;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Quiz Question Screen */

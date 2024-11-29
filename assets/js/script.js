@@ -29,8 +29,6 @@ const totalQuestionsDisplay = document.getElementById("total-questions");
 const scorePercentageDisplay = document.getElementById("score-percentage");
 const playAgainButton = document.getElementById("play-again-button");
 
-
-
  // Hide all screens except the start screen
 function showStartScreen() {
     startScreen.style.display = "flex";
@@ -56,4 +54,66 @@ function showQuizParametersScreen() {
 // Attach event listener to the Start button
 startButton.addEventListener("click", showQuizParametersScreen);
 
+// Initialize by hiding the button
+parameterStartButton.style.display = "none";
 
+// Function to check dropdown selections
+function checkDropdownSelections() {
+    // Check if all dropdowns have a selected value that is not the default
+    const isNumberSelected = numberOfQuestionsSelect.value !== "Select Number";
+    const isCategorySelected = categorySelect.value !== "Select Category";
+    const isDifficultySelected = difficultySelect.value !== "Select Difficulty";
+    const isTimerSelected = timerSelect.value !== "Select Timer";
+
+    // Enable or disable the button based on selections
+    if (isNumberSelected && isCategorySelected && isDifficultySelected && isTimerSelected) {
+        parameterStartButton.style.display = "block"; // Show the button
+    } else {
+        parameterStartButton.style.display = "none"; // Hide the button
+    }
+}
+
+// Attach event listeners to all dropdowns
+const dropdowns = quizParametersScreen.querySelectorAll("select");
+
+// Attach change event listener to each dropdown
+dropdowns.forEach((dropdown) => {
+    dropdown.addEventListener("change", checkDropdownSelections);
+});
+
+// Function to show the Quiz Questions screen
+function showQuizQuestionScreen() {
+    // Hide other screens
+    startScreen.style.display = "none";
+    quizParametersScreen.style.display = "none";
+    resultsScreen.style.display = "none";
+
+    // Show the Questions screen
+    quizQuestionScreen.style.display = "flex";
+}
+
+// Attach event listener to the Parameters Start button
+parameterStartButton.addEventListener("click", showQuizQuestionScreen);
+
+
+// Initially hide the Next button when the page loads
+hideNextButton();
+
+// Function to hide the Next button (called when the question is reset or before answering)
+function hideNextButton() {
+    nextButton.style.display = "none";  // Hide the next button
+}
+
+// Function to show the Next button when an answer is clicked
+function showNextButton() {
+    nextButton.style.display = "block";  // Show the next button
+}
+
+// Add event listeners to all answer buttons
+const answerButtons = document.querySelectorAll("#button-container button");
+
+answerButtons.forEach((button) => {
+    button.addEventListener("click", function() {
+        showNextButton(); // Show the next button once an answer is selected
+    });
+});
