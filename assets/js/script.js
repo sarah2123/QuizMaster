@@ -40,6 +40,9 @@ function showStartScreen() {
 // Call the function to initialize
 showStartScreen();
 
+// Attach event listener to the Start button
+startButton.addEventListener("click", showQuizParametersScreen);
+
 // Function to show the Quiz Parameters screen when the start button is clicked
 function showQuizParametersScreen() {
     // Hide the start screen and other screens
@@ -50,9 +53,6 @@ function showQuizParametersScreen() {
     // Show the quiz parameters screen
     quizParametersScreen.style.display = "flex";
 }
-
-// Attach event listener to the Start button
-startButton.addEventListener("click", showQuizParametersScreen);
 
 // Initialize by hiding the button
 parameterStartButton.style.display = "none";
@@ -81,6 +81,9 @@ dropdowns.forEach((dropdown) => {
     dropdown.addEventListener("change", checkDropdownSelections);
 });
 
+// Attach event listener to the Parameters Start button
+parameterStartButton.addEventListener("click", showQuizQuestionScreen);
+
 // Function to show the Quiz Questions screen
 function showQuizQuestionScreen() {
     // Hide other screens
@@ -91,10 +94,6 @@ function showQuizQuestionScreen() {
     // Show the Questions screen
     quizQuestionScreen.style.display = "flex";
 }
-
-// Attach event listener to the Parameters Start button
-parameterStartButton.addEventListener("click", showQuizQuestionScreen);
-
 
 // Initially hide the Next button when the page loads
 hideNextButton();
@@ -109,11 +108,25 @@ function showNextButton() {
     nextButton.style.display = "block";  // Show the next button
 }
 
-// Add event listeners to all answer buttons
 const answerButtons = document.querySelectorAll("#button-container button");
 
 answerButtons.forEach((button) => {
     button.addEventListener("click", function() {
-        showNextButton(); // Show the next button once an answer is selected
+        // Disable all answer buttons
+        disableAnswerButtons();
+        
+        // Show the next button once an answer is selected
+        showNextButton();
+        
+        // Optionally, apply the color change to show correct/incorrect answer
+        highlightSelectedAnswer(button);
     });
 });
+
+// Function to disable all answer buttons
+function disableAnswerButtons() {
+    answerButtons.forEach((btn) => {
+        btn.disabled = true;  // Disable all answer buttons
+        btn.style.pointerEvents = "none";  // Ensure no interaction after selection
+    });
+}
