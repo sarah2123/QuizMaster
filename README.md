@@ -53,7 +53,7 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
   - **Value to User:** Increases accessibility and enjoyment by accommodating varying levels of expertise and challenge preferences.
 
 - **Timer Dropdown Menu**
-  - **Feature Description:**  Users can select a time limit for each question from a dropdown menu, choosing between 10, 15, or 20 seconds.
+  - **Feature Description:**  Users can select a time limit for each question from a dropdown menu, choosing between 10, 15, 20 or 30 seconds.
   - **Responsiveness:** The dropdown menu is accessible on all device types, ensuring smooth functionality and intuitive navigation.
   - **Value to User:** Adds customization to the quiz experience, allowing users to tailor the level of time-based challenge to their preferences or skill level.
 

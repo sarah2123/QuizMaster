@@ -32,9 +32,53 @@
                         </div>
                         <div class="d-flex justify-content-center column-gap-3">
                             <button class="btn" id="start-button"><i class="fa-solid fa-play"></i>Start</button>
-                            <button class="btn" id="how-to-play-button"><i class="fa-solid fa-circle-info"></i>How to Play</button>
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#howToPlayModal"
+                                id="how-to-play-button"><i class="fa-solid fa-circle-info"></i>How to Play</button>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Play Modal-->
+    <!-- Modal -->
+    <div class="modal fade" id="howToPlayModal" tabindex="-1" aria-labelledby="howToPlayModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="howToPlayModalLabel">How to Play</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Welcome to <strong>QuizMaster!</strong> Follow these steps to get started:</p>
+                    <ol>
+                        <li><strong>Select Your Quiz Settings:</strong>
+                            <ul>
+                                <li>Choose the number of questions you'd like to answer.</li>
+                                <li>Select a category that interests you, such as General Knowledge, Sports, or
+                                    Entertainment.</li>
+                                <li>Pick your desired difficulty: Easy, Medium, or Hard.</li>
+                                <li>Set a timer for each question (e.g., 10 seconds, 15 seconds).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Start the Quiz:</strong><br>Once you're ready, click "Start" to begin.</li>
+                        <li><strong>Answer Questions:</strong>
+                            <ul>
+                                <li>Read each question carefully and choose the correct answer from the options
+                                    provided.</li>
+                                <li>Make sure to answer before the timer runs out!</li>
+                            </ul>
+                        </li>
+                        <li><strong>Check Your Results:</strong><br> After completing all the questions, your score and
+                            percentage will be displayed.</li>
+                        <li><strong>Challenge Yourself:</strong><br> Play again to beat your previous score or try a
+                            different category!</li>
+                    </ol>
+                    <p>Good luck!</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -83,9 +127,11 @@
                             <option value="1">10s</option>
                             <option value="2">15s</option>
                             <option value="3">20s</option>
+                            <option value="3">30s</option>
                         </select>
                         <div>
-                            <button class="btn mt-2" id="parameter-start-button"><i class="fa-solid fa-play"></i>Start</button>
+                            <button class="btn mt-2" id="parameter-start-button"><i
+                                    class="fa-solid fa-play"></i>Start</button>
                         </div>
                     </div>
                 </div>
@@ -99,14 +145,17 @@
             <div class="col-12">
                 <div class="card text-center">
                     <div class="card-body">
-                        <div class="d-flex justify-content-start mb-2">
+                        <div class="d-flex justify-content-between mb-2">
+                            <i class="fa-solid fa-house"></i>
                             <h4><i class="fa-solid fa-crown"></i>QuizMaster</h4>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-1">
                             <h3 id="progress-tracker">Question 1/10</h3>
                         </div>
                         <div class="d-flex justify-content-center mb-3">
-                            <div id="timer"></div>
+                            <div id="timer-container">
+                                <div id="timer"></div>
+                            </div>
                         </div>
                         <div class="mb-3">
                             <h2 class="card-title" id="question">What are the main colours on the flag of Spain?</h2>
@@ -118,7 +167,8 @@
                             <button class="btn" id="answer-d">Red and Yellow</button>
                         </div>
                         <div>
-                            <button class="btn float-end" id="next-button"><i class="fa-solid fa-circle-right"></i>Next</button>
+                            <button class="btn float-end" id="next-button"><i
+                                    class="fa-solid fa-circle-right"></i>Next</button>
                         </div>
                     </div>
                 </div>
@@ -142,7 +192,8 @@
                                     id="score-percentage">80</strong><strong>%</strong> of the questions correctly.</h3>
                         </div>
                         <div>
-                            <button class="btn" id="play-again-button"><i class="fa-solid fa-play"></i>Play Again</button>
+                            <button class="btn" id="play-again-button"><i class="fa-solid fa-play"></i>Play
+                                Again</button>
                         </div>
                     </div>
                 </div>
