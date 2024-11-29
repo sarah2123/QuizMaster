@@ -1,5 +1,5 @@
 // this javascript is temporary to allow for styling checks. it was generate by ai and has not been checked.
-// this is a reminder not to use it 
+// this is a reminder not to use it without checking
 
 
 
@@ -32,24 +32,24 @@ document.addEventListener("DOMContentLoaded", () => {
     // Show Quiz Parameters Screen when Start is clicked
     startButton.addEventListener("click", () => {
         hideAllScreens();
-        quizParametersScreen.style.display = "flex"; // Adjust based on your layout
+        quizParametersScreen.style.display = "flex"; 
     });
 
     // Show Quiz Question Screen when Start on Quiz Parameters is clicked
     parameterStartButton.addEventListener("click", () => {
         hideAllScreens();
-        quizQuestionScreen.style.display = "flex"; // Adjust based on your layout
+        quizQuestionScreen.style.display = "flex"; 
     });
 
     // Show Results Screen when Next on Quiz Question is clicked
     nextButton.addEventListener("click", () => {
         hideAllScreens();
-        resultsScreen.style.display = "flex"; // Adjust based on your layout
+        resultsScreen.style.display = "flex"; 
     });
 
     // Go back to Start Screen when Play Again is clicked
     playAgainButton.addEventListener("click", () => {
         hideAllScreens();
-        startScreen.style.display = "flex"; // Adjust based on your layout
+        startScreen.style.display = "flex";
     });
 });
