@@ -57,4 +57,3 @@ function showQuizParametersScreen() {
 startButton.addEventListener("click", showQuizParametersScreen);
 
 
-
