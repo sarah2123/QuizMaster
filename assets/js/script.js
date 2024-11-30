@@ -65,6 +65,7 @@ timerSelect.addEventListener('change', function () {
   updateParameterValue(timerSelect, 'timer');
 });
 
+
 // Hide all screens except the start screen
 function showStartScreen() {
   startScreen.style.display = "flex";
@@ -208,23 +209,29 @@ function displayQuestion(index) {
     const button = document.createElement("button");
     button.classList.add("btn");
     button.textContent = decodeHtmlEntities(answer);
+
+    // Add event listener for the "Next" button display logic
     button.addEventListener("click", () => {
+      // Disable all answer buttons once an answer is selected
       const allButtons = buttonContainer.querySelectorAll(".btn");
       allButtons.forEach(btn => btn.disabled = true);
 
+      // Check if the selected answer is correct
       if (answer === questionData.correct_answer) {
-        button.style.backgroundColor = "#B8D8BE";
-        score++;
+        button.style.backgroundColor = "#B8D8BE"; // Correct answer in green
+        score++; // Increment score if correct
       } else {
-        button.style.backgroundColor = "#ff9e99";
+        button.style.backgroundColor = "#ff9e99"; // Incorrect answer in red
       }
 
+      // Highlight the correct answer
       allButtons.forEach(btn => {
         if (btn.textContent === decodeHtmlEntities(questionData.correct_answer)) {
           btn.style.backgroundColor = "#B8D8BE"; // Highlight the correct answer in green
         }
       });
 
+      // Display the "Next" button
       nextButton.style.display = "inline-block";
     });
 
@@ -236,14 +243,19 @@ function displayQuestion(index) {
 
 // Function to move to the next question
 function goToNextQuestion() {
+  // Increment the current question index
   currentQuestionIndex++;
+
+  // Update the progress tracker
   updateProgressTracker();
+
+  // Check if there are more questions
   if (currentQuestionIndex < questions.length) {
-    displayQuestion(currentQuestionIndex);
-    nextButton.style.display = "none";
+    displayQuestion(currentQuestionIndex);  // Display the next question
+    nextButton.style.display = "none";  // Hide the Next button again
   } else {
-    quizQuestionScreen.style.display = "none";
-    resultsScreen.style.display = "flex";
+    // If there are no more questions, show the results screen (you can implement your results screen here)
+    displayResults()
   }
 }
 
@@ -252,3 +264,16 @@ parameterStartButton.addEventListener("click", fetchAndDisplayQuestions);
 
 // Add event listener to the Next button
 nextButton.addEventListener("click", goToNextQuestion);
+
+// Function to display the results
+function displayResults() {
+  const scorePercentage = Math.round((score / numberOfQuestions) * 100);
+  scoreDisplay.textContent = score; // Update score
+  totalQuestionsDisplay.textContent = numberOfQuestions;
+  scorePercentageDisplay.textContent = scorePercentage;
+
+  // Show the results screen
+  quizQuestionScreen.style.display = "none";
+  resultsScreen.style.display = "flex";
+}
+
