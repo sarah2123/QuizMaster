@@ -117,3 +117,15 @@ playAgainButton.addEventListener("click", () => {
   timerSelect.value = "Select Timer";
   checkDropdowns();
 });
+
+// Home button to return to the start screen and reset quiz variables
+homeButton.addEventListener("click", () => {
+  currentQuestionIndex = 0;
+  score = 0;
+  showStartScreen();
+  numberOfQuestionsSelect.value = "Select Number";
+  categorySelect.value = "Select Category";
+  difficultySelect.value = "Select Difficulty";
+  timerSelect.value = "Select Timer";
+  checkDropdowns();
+});
