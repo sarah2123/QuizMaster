@@ -159,7 +159,7 @@ h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform: perspective(100px) translateZ(0);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-    height: 50px;
+    min-height: 50px;
 }
 
 #button-container .btn:hover {

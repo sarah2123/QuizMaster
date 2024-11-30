@@ -16,7 +16,6 @@ const quizQuestionScreen = document.getElementById("quiz-question-container");
 const progressTracker = document.getElementById("progress-tracker");
 const timerContainer = document.getElementById("timer-container");
 const timerElement = document.getElementById("timer");
-const questionText = document.getElementById("question");
 const answerButtons = document.querySelectorAll("#button-container .btn");
 const nextButton = document.getElementById("next-button");
 const homeButton = document.getElementById("home-button");
@@ -109,7 +108,7 @@ checkDropdowns();
 
 // Play again button to return to parameters screen and reset variables and parameters.
 playAgainButton.addEventListener("click", () => {
-  showQuizParametersScreen();
+  showStartScreen();
   currentQuestionIndex = 0;
   score = 0;
   numberOfQuestionsSelect.value = "Select Number";
@@ -121,9 +120,9 @@ playAgainButton.addEventListener("click", () => {
 
 // Home button to return to the start screen and reset quiz variables
 homeButton.addEventListener("click", () => {
+  showStartScreen();
   currentQuestionIndex = 0;
   score = 0;
-  showStartScreen();
   numberOfQuestionsSelect.value = "Select Number";
   categorySelect.value = "Select Category";
   difficultySelect.value = "Select Difficulty";
@@ -166,7 +165,7 @@ function fetchAndDisplayQuestions() {
     .then(data => {
       if (data.results && data.results.length > 0) {
         questions = data.results;
-        quizParametersScreen.style.display = 'none'; // Only transition if data is valid
+        quizParametersScreen.style.display = 'none';
         quizQuestionScreen.style.display = 'flex';
         displayQuestion(currentQuestionIndex);
       } else {
@@ -176,7 +175,6 @@ function fetchAndDisplayQuestions() {
     .catch(error => {
       console.error("Error fetching quiz questions:", error);
       alert(error.message || "An error occurred while fetching questions. Please try again.");
-      // Ensure the parameters screen remains displayed
       quizParametersScreen.style.display = 'flex';
       quizQuestionScreen.style.display = 'none';
     });
@@ -196,10 +194,8 @@ function displayQuestion(index) {
 
   const questionData = questions[index];
 
-  // Decode and display the current question
   questionElement.textContent = decodeHtmlEntities(questionData.question);
 
-  // Decode and display answers
   const allAnswers = [questionData.correct_answer, ...questionData.incorrect_answers];
   const shuffledAnswers = allAnswers.sort(() => Math.random() - 0.5);
 
@@ -210,52 +206,43 @@ function displayQuestion(index) {
     button.classList.add("btn");
     button.textContent = decodeHtmlEntities(answer);
 
-    // Add event listener for the "Next" button display logic
     button.addEventListener("click", () => {
-      // Disable all answer buttons once an answer is selected
       const allButtons = buttonContainer.querySelectorAll(".btn");
       allButtons.forEach(btn => btn.disabled = true);
 
-      // Check if the selected answer is correct
       if (answer === questionData.correct_answer) {
-        button.style.backgroundColor = "#B8D8BE"; // Correct answer in green
-        score++; // Increment score if correct
+        button.style.backgroundColor = "#B8D8BE";
+        score++;
       } else {
-        button.style.backgroundColor = "#ff9e99"; // Incorrect answer in red
+        button.style.backgroundColor = "#ff9e99";
       }
 
-      // Highlight the correct answer
       allButtons.forEach(btn => {
         if (btn.textContent === decodeHtmlEntities(questionData.correct_answer)) {
-          btn.style.backgroundColor = "#B8D8BE"; // Highlight the correct answer in green
+          btn.style.backgroundColor = "#B8D8BE";
         }
       });
 
-      // Display the "Next" button
       nextButton.style.display = "inline-block";
     });
 
     buttonContainer.appendChild(button);
   });
 
-  console.log(`Question ${index + 1}:`, decodeHtmlEntities(questionData.question)); // Debugging
+  console.log(`Question ${index + 1}:`, decodeHtmlEntities(questionData.question));
 }
 
 // Function to move to the next question
 function goToNextQuestion() {
-  // Increment the current question index
   currentQuestionIndex++;
 
-  // Update the progress tracker
   updateProgressTracker();
 
-  // Check if there are more questions
   if (currentQuestionIndex < questions.length) {
-    displayQuestion(currentQuestionIndex);  // Display the next question
-    nextButton.style.display = "none";  // Hide the Next button again
+    displayQuestion(currentQuestionIndex);
+    nextButton.style.display = "none";
   } else {
-    // If there are no more questions, show the results screen (you can implement your results screen here)
-    displayResults()
+    displayResults();
   }
 }
 
@@ -268,11 +255,9 @@ nextButton.addEventListener("click", goToNextQuestion);
 // Function to display the results
 function displayResults() {
   const scorePercentage = Math.round((score / numberOfQuestions) * 100);
-  scoreDisplay.textContent = score; // Update score
+  scoreDisplay.textContent = score;
   totalQuestionsDisplay.textContent = numberOfQuestions;
   scorePercentageDisplay.textContent = scorePercentage;
-
-  // Show the results screen
   quizQuestionScreen.style.display = "none";
   resultsScreen.style.display = "flex";
 }
