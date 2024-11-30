@@ -74,3 +74,13 @@ function showStartScreen() {
 }
 
 showStartScreen();
+
+// Show the quiz parameters screen after selecting start button.
+function showQuizParametersScreen() {
+  startScreen.style.display = "none";
+  resultsScreen.style.display = 'none';
+  quizQuestionScreen.style.display = "none";
+  quizParametersScreen.style.display = "flex";
+}
+
+startButton.addEventListener("click", showQuizParametersScreen);
