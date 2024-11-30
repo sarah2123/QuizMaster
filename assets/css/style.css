@@ -91,8 +91,13 @@ h1 {
     padding: 10px 20px;
 }
 
-#howToPlayModal .modal-body {
+#howToPlayModal .modal-content {
     background-color: var(--tertiary-color);
+}
+
+.toast-body {
+    background-color: var(--tertiary-color);
+    border-radius: 5px;
 }
 
 /* Quiz Parameters Screen */
@@ -131,7 +136,7 @@ h1 {
 #timer-container {
     border: 2px solid var(--secondary-color);
     width: 80%;
-    height: 20px;
+    height: 25px;
     border-radius: 25px;
     overflow: hidden;
 }
@@ -141,6 +146,7 @@ h1 {
     width: 100%;
     background-color: var(--secondary-color);
     transition: width linear;
+    font-weight: bold;
 }
 
 #button-container {
@@ -159,7 +165,7 @@ h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform: perspective(100px) translateZ(0);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-    height: 50px;
+    min-height: 50px;
 }
 
 #button-container .btn:hover {
@@ -188,3 +194,4 @@ h1 {
 div #logo {
     font-weight: bold;
 }
+
