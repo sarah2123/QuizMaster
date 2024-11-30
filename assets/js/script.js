@@ -27,3 +27,12 @@ const scoreDisplay = document.getElementById("score");
 const totalQuestionsDisplay = document.getElementById("total-questions");
 const scorePercentageDisplay = document.getElementById("score-percentage");
 const playAgainButton = document.getElementById("play-again-button");
+
+// Declare variables
+let numberOfQuestions = null;
+let category = null;
+let difficulty = null;
+let timer = null;
+let questions = [];
+let currentQuestionIndex = 0;
+let score = 0;
