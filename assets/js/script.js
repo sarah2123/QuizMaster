@@ -36,3 +36,31 @@ let timer = null;
 let questions = [];
 let currentQuestionIndex = 0;
 let score = 0;
+
+// Function to update selected value
+function updateParameterValue(selectElement, parameterName) {
+  const selectedValue = selectElement.value;
+  if (parameterName === 'numberOfQuestions') {
+      numberOfQuestions = selectedValue !== 'Select Number' ? selectedValue : null;
+  } else if (parameterName === 'category') {
+      category = selectedValue !== 'Select Category' ? selectedValue : null;
+  } else if (parameterName === 'difficulty') {
+      difficulty = selectedValue !== 'Select Difficulty' ? selectedValue : null;
+  } else if (parameterName === 'timer') {
+      timer = selectedValue !== 'Select Timer' ? selectedValue : null;
+  }
+}
+
+// Listen for changes and update the values when the user selects a new option
+numberOfQuestionsSelect.addEventListener('change', function () {
+  updateParameterValue(numberOfQuestionsSelect, 'numberOfQuestions');
+});
+categorySelect.addEventListener('change', function () {
+  updateParameterValue(categorySelect, 'category');
+});
+difficultySelect.addEventListener('change', function () {
+  updateParameterValue(difficultySelect, 'difficulty');
+});
+timerSelect.addEventListener('change', function () {
+  updateParameterValue(timerSelect, 'timer');
+});
