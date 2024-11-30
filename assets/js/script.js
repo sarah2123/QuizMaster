@@ -64,3 +64,13 @@ difficultySelect.addEventListener('change', function () {
 timerSelect.addEventListener('change', function () {
   updateParameterValue(timerSelect, 'timer');
 });
+
+// Hide all screens except the start screen
+function showStartScreen() {
+  startScreen.style.display = "flex";
+  quizParametersScreen.style.display = "none";
+  quizQuestionScreen.style.display = "none";
+  resultsScreen.style.display = "none";
+}
+
+showStartScreen();
