@@ -84,3 +84,24 @@ function showQuizParametersScreen() {
 }
 
 startButton.addEventListener("click", showQuizParametersScreen);
+
+// Show start button when all parameters are selected
+function checkDropdowns() {
+  const isNumberSelected = numberOfQuestionsSelect.value !== "Select Number";
+  const isCategorySelected = categorySelect.value !== "Select Category";
+  const isDifficultySelected = difficultySelect.value !== "Select Difficulty";
+  const isTimerSelected = timerSelect.value !== "Select Timer";
+
+  if (isNumberSelected && isCategorySelected && isDifficultySelected && isTimerSelected) {
+      parameterStartButton.style.display = "block";
+  } else {
+      parameterStartButton.style.display = "none";
+  }
+}
+
+numberOfQuestionsSelect.addEventListener("change", checkDropdowns);
+categorySelect.addEventListener("change", checkDropdowns);
+difficultySelect.addEventListener("change", checkDropdowns);
+timerSelect.addEventListener("change", checkDropdowns);
+
+checkDropdowns();
