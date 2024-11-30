@@ -152,7 +152,7 @@ function fetchAndDisplayQuestions() {
             quizQuestionScreen.style.display = 'flex';
             displayQuestion(currentQuestionIndex);
         } else {
-            throw new Error("Not enough questions! Please adjust your parameters.");
+            throw new Error("Not enough questions available! Please adjust your parameters.");
         }
     }).catch(function (error) {
         console.error("Error fetching quiz questions:", error);

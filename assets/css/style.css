@@ -95,6 +95,11 @@ h1 {
     background-color: var(--tertiary-color);
 }
 
+.toast-body {
+    background-color: var(--tertiary-color);
+    border-radius: 5px;
+}
+
 /* Quiz Parameters Screen */
 
 #quiz-parameters-container h2 {

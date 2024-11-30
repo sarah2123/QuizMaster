@@ -94,9 +94,13 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
   - **Value to user:** Provides users with immediate feedback on their overall performance, offering a sense of accomplishment and closure to the experience.
 
 - **Play Again Button**
-  - **Feature Description:** A "Play Again" button allows users to reset the quiz and return to the parameter selection screen. The button has a hover effect.
+  - **Feature Description:** A "Play Again" button allows users to reset the quiz and return to the start screen. The button has a hover effect.
   - **Responsiveness:** The button is styled to be easily clickable or tappable, adjusting appropriately for all screen sizes.
   - **Value to user:** Encourages replayability, giving users the opportunity to improve their score or try different quiz settings without refreshing the page.
+
+### Added Features
+- Home button to allow users to exit whilst in a quiz.
+- Toast notification when there's an error fetching questions or there's no questions matching selected parameters.
 
 ### Future Features
 - Allow users to review their answers after the quiz.
@@ -201,7 +205,8 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 ![Mobile Wireframe](/assets/media/mobile.png)
 ### Surface
 **Visual Design**
-- Parkinsan Font and Blue Colour Scheme
+
+Many online quizzes lack visual appeal, often featuring outdated layouts and uninspired designs. QuizMaster breaks the mold with a modern, sleek interface that captivates users from the moment they arrive. By incorporating the playful yet professional Parkinsan font and a vibrant blue color scheme, the platform ensures an engaging and enjoyable experience. The responsive design adapts seamlessly to all devices, with intuitive layouts and bold, contrasting elements that enhance readability and accessibility. QuizMaster combines aesthetics with functionality, creating a quiz platform that's not only fun to play but a pleasure to look at.
 
 **Typography**
 
@@ -212,18 +217,27 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 ![Colour Scheme](/assets/media/Colors.png)
 
 ## Technologies Used
-- HTML5
-- CSS3
-- Javascript
-- Bootstrap
-- Git
-- Github
-- Gitpod
-- Font Awesome
-- Balsamiq
-- favicon.io
-- Coolers
-- Chrome DevTools
+- <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank">HTML5</a>
+- <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS3</a> 
+- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a> 
+- <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
+- <a href="https://git-scm.com/" target="_blank">Git</a> 
+- <a href="https://github.com/" target="_blank">Github</a>
+- <a href="https://www.gitpod.io/" target="_blank">Gitpod</a> 
+- <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
+- <a href="https://balsamiq.com/" target="_blank">Balsamiq</a>
+- <a href="https://favicon.io/" target="_blank">favicon.io</a>
+- <a href="https://coolors.co/" target="_blank">Coolors</a>
+- <a href="https://developer.chrome.com/docs/devtools" target="_blank">Chrome DevTools</a> 
+- <a href="https://validator.w3.org/" target="_blank">W3C HTML Validator</a>
+- <a href="https://jigsaw.w3.org/css-validator/validator" target="_blank">Jigsaw CSS Validator</a>
+- <a href="https://www.jslint.com/" target="_blank">JSLint Javascript Validator</a>
+- <a href="https://jshint.com/" target="_blank">JSHint Javascript Validator</a>
+- <a href="https://developer.chrome.com/docs/lighthouse/overview" target="_blank">Chrome Lighthouse</a>
+- <a href="https://webaim.org/" target="_blank">WebAim</a>
+- <a href="https://ui.dev/amiresponsive?" target="_blank">Am I Responsive?</a>
+- <a href="https://www.browserling.com/" target="_blank">Browserling</a>
+- <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
 
 ## Deployment
 - The site was deployed to GitHub pages. The steps to deploy are as follows: 
@@ -249,7 +263,7 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 ## Credits
 ### Content
 - Chatgpt
+- open trivia database
 ### Media
 ### Acknowledgements
-
 ## AI Usage
