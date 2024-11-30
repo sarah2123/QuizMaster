@@ -48,31 +48,15 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="howToPlayModalLabel">How to Play</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <p>Welcome to <strong>QuizMaster!</strong> Follow these steps to get started:</p>
                     <ol>
-                        <li><strong>Select Your Quiz Settings:</strong>
-                            <ul>
-                                <li>Choose the number of questions you'd like to answer.</li>
-                                <li>Select a category that interests you, such as General Knowledge, Sports, or
-                                    Entertainment.</li>
-                                <li>Pick your desired difficulty: Easy, Medium, or Hard.</li>
-                                <li>Set a timer for each question (e.g., 10 seconds, 15 seconds).</li>
-                            </ul>
-                        </li>
-                        <li><strong>Start the Quiz:</strong><br>Once you're ready, click "Start" to begin.</li>
-                        <li><strong>Answer Questions:</strong>
-                            <ul>
-                                <li>Read each question carefully and choose the correct answer from the options
-                                    provided.</li>
-                                <li>Make sure to answer before the timer runs out!</li>
-                            </ul>
-                        </li>
-                        <li><strong>Check Your Results:</strong><br> After completing all the questions, your score and
-                            percentage will be displayed.</li>
-                        <li><strong>Challenge Yourself:</strong><br> Play again to beat your previous score or try a
+                        <li><strong>Select Your Quiz Settings</strong></li>
+                        <li><strong>Start the Quiz</strong></li>
+                        <li><strong>Answer Questions</strong><br>Make sure to answer before the timer runs out!</li>
+                        <li><strong>Check Your Results</strong></li>
+                        <li><strong>Challenge Yourself!</strong><br>Play again to beat your previous score or try a
                             different category!</li>
                     </ol>
                     <p>Good luck!</p>
@@ -101,7 +85,8 @@
                             <option value="15">15</option>
                             <option value="20">20</option>
                         </select>
-                        <select class="form-select" id="category-of-questions" aria-label="select category of questions">
+                        <select class="form-select" id="category-of-questions"
+                            aria-label="select category of questions">
                             <option selected>Select Category</option>
                             <option value="9">General Knowledge</option>
                             <option value="10">Books</option>
@@ -116,13 +101,15 @@
                             <option value="24">Politics</option>
                             <option value="25">Art</option>
                         </select>
-                        <select class="form-select" id="difficulty-of-questions" aria-label="select difficulty of questions">
+                        <select class="form-select" id="difficulty-of-questions"
+                            aria-label="select difficulty of questions">
                             <option selected>Select Difficulty</option>
                             <option value="easy">Easy</option>
                             <option value="medium">Medium</option>
                             <option value="hard">Hard</option>
                         </select>
-                        <select class="form-select" id="timer-for-questions" aria-label="select timer for each question">
+                        <select class="form-select" id="timer-for-questions"
+                            aria-label="select timer for each question">
                             <option selected>Select Timer</option>
                             <option value="10">10s</option>
                             <option value="15">15s</option>
@@ -132,7 +119,6 @@
                         <div>
                             <button class="btn mt-4 mb-3" id="parameter-start-button"><i
                                     class="fa-solid fa-play"></i>Start</button>
-                            <p id="error"></p>
                         </div>
                     </div>
                 </div>
@@ -198,6 +184,19 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast to display errors-->
+    <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3">
+        <div id="errorToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto"><i class="fa-solid fa-crown"></i>QuizMaster</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="errorToastMessage">
+                An error occurred.
             </div>
         </div>
     </div>

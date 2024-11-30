@@ -91,7 +91,7 @@ h1 {
     padding: 10px 20px;
 }
 
-#howToPlayModal .modal-body {
+#howToPlayModal .modal-content {
     background-color: var(--tertiary-color);
 }
 
@@ -131,7 +131,7 @@ h1 {
 #timer-container {
     border: 2px solid var(--secondary-color);
     width: 80%;
-    height: 20px;
+    height: 25px;
     border-radius: 25px;
     overflow: hidden;
 }
@@ -141,6 +141,7 @@ h1 {
     width: 100%;
     background-color: var(--secondary-color);
     transition: width linear;
+    font-weight: bold;
 }
 
 #button-container {
@@ -188,3 +189,4 @@ h1 {
 div #logo {
     font-weight: bold;
 }
+
