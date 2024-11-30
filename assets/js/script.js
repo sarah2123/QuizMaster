@@ -105,3 +105,15 @@ difficultySelect.addEventListener("change", checkDropdowns);
 timerSelect.addEventListener("change", checkDropdowns);
 
 checkDropdowns();
+
+// Play again button to return to parameters screen and reset variables and parameters.
+playAgainButton.addEventListener("click", () => {
+  showQuizParametersScreen();
+  currentQuestionIndex = 0;
+  score = 0;
+  numberOfQuestionsSelect.value = "Select Number";
+  categorySelect.value = "Select Category";
+  difficultySelect.value = "Select Difficulty";
+  timerSelect.value = "Select Timer";
+  checkDropdowns();
+});
