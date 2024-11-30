@@ -41,13 +41,13 @@ let score = 0;
 function updateParameterValue(selectElement, parameterName) {
   const selectedValue = selectElement.value;
   if (parameterName === 'numberOfQuestions') {
-      numberOfQuestions = selectedValue !== 'Select Number' ? selectedValue : null;
+    numberOfQuestions = selectedValue !== 'Select Number' ? selectedValue : null;
   } else if (parameterName === 'category') {
-      category = selectedValue !== 'Select Category' ? selectedValue : null;
+    category = selectedValue !== 'Select Category' ? selectedValue : null;
   } else if (parameterName === 'difficulty') {
-      difficulty = selectedValue !== 'Select Difficulty' ? selectedValue : null;
+    difficulty = selectedValue !== 'Select Difficulty' ? selectedValue : null;
   } else if (parameterName === 'timer') {
-      timer = selectedValue !== 'Select Timer' ? selectedValue : null;
+    timer = selectedValue !== 'Select Timer' ? selectedValue : null;
   }
 }
 
@@ -93,9 +93,9 @@ function checkDropdowns() {
   const isTimerSelected = timerSelect.value !== "Select Timer";
 
   if (isNumberSelected && isCategorySelected && isDifficultySelected && isTimerSelected) {
-      parameterStartButton.style.display = "block";
+    parameterStartButton.style.display = "block";
   } else {
-      parameterStartButton.style.display = "none";
+    parameterStartButton.style.display = "none";
   }
 }
 
@@ -129,3 +129,126 @@ homeButton.addEventListener("click", () => {
   timerSelect.value = "Select Timer";
   checkDropdowns();
 });
+
+// Show quiz question when start button is clicked.
+parameterStartButton.addEventListener('click', () => {
+  updateProgressTracker();
+});
+
+// Initially, hide the Next button
+nextButton.style.display = "none";
+
+// Add event listeners to all answer buttons
+answerButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    nextButton.style.display = "inline-block";
+    answerButtons.forEach(button => {
+      button.disabled = true;
+    });
+  });
+});
+
+function updateProgressTracker() {
+  progressTracker.textContent = `Question ${currentQuestionIndex + 1}/${numberOfQuestions}`;
+}
+
+function fetchAndDisplayQuestions() {
+  const apiURL = `https://opentdb.com/api.php?amount=${numberOfQuestions}&category=${category}&difficulty=${difficulty}&type=multiple`;
+
+  fetch(apiURL)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Failed to fetch questions from the API");
+      }
+      return response.json();
+    })
+    .then(data => {
+      if (data.results && data.results.length > 0) {
+        questions = data.results;
+        quizParametersScreen.style.display = 'none'; // Only transition if data is valid
+        quizQuestionScreen.style.display = 'flex';
+        displayQuestion(currentQuestionIndex);
+      } else {
+        throw new Error("No questions found! Please adjust your parameters.");
+      }
+    })
+    .catch(error => {
+      console.error("Error fetching quiz questions:", error);
+      alert(error.message || "An error occurred while fetching questions. Please try again.");
+      // Ensure the parameters screen remains displayed
+      quizParametersScreen.style.display = 'flex';
+      quizQuestionScreen.style.display = 'none';
+    });
+}
+
+// Function to decode HTML entities
+function decodeHtmlEntities(text) {
+  const parser = new DOMParser();
+  return parser.parseFromString(text, "text/html").documentElement.textContent;
+}
+
+
+// Function to display the current question
+function displayQuestion(index) {
+  const questionElement = document.getElementById("question");
+  const buttonContainer = document.getElementById("button-container");
+
+  const questionData = questions[index];
+
+  // Decode and display the current question
+  questionElement.textContent = decodeHtmlEntities(questionData.question);
+
+  // Decode and display answers
+  const allAnswers = [questionData.correct_answer, ...questionData.incorrect_answers];
+  const shuffledAnswers = allAnswers.sort(() => Math.random() - 0.5);
+
+  buttonContainer.innerHTML = "";
+
+  shuffledAnswers.forEach(answer => {
+    const button = document.createElement("button");
+    button.classList.add("btn");
+    button.textContent = decodeHtmlEntities(answer);
+    button.addEventListener("click", () => {
+      const allButtons = buttonContainer.querySelectorAll(".btn");
+      allButtons.forEach(btn => btn.disabled = true);
+
+      if (answer === questionData.correct_answer) {
+        button.style.backgroundColor = "#B8D8BE";
+        score++;
+      } else {
+        button.style.backgroundColor = "#ff9e99";
+      }
+
+      allButtons.forEach(btn => {
+        if (btn.textContent === decodeHtmlEntities(questionData.correct_answer)) {
+          btn.style.backgroundColor = "#B8D8BE"; // Highlight the correct answer in green
+        }
+      });
+
+      nextButton.style.display = "inline-block";
+    });
+
+    buttonContainer.appendChild(button);
+  });
+
+  console.log(`Question ${index + 1}:`, decodeHtmlEntities(questionData.question)); // Debugging
+}
+
+// Function to move to the next question
+function goToNextQuestion() {
+  currentQuestionIndex++;
+  updateProgressTracker();
+  if (currentQuestionIndex < questions.length) {
+    displayQuestion(currentQuestionIndex);
+    nextButton.style.display = "none";
+  } else {
+    quizQuestionScreen.style.display = "none";
+    resultsScreen.style.display = "flex";
+  }
+}
+
+// Call the fetchAndDisplayQuestions function when the parameter start button is clicked
+parameterStartButton.addEventListener("click", fetchAndDisplayQuestions);
+
+// Add event listener to the Next button
+nextButton.addEventListener("click", goToNextQuestion);
