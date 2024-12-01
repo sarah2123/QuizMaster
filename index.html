@@ -78,7 +78,7 @@
                     <div class="card-body">
                         <div>
                             <h2 class="mb-3"><i class="fa-solid fa-crown"></i>QuizMaster</h2>
-                            <h3 class="mb-3">Customise your quiz using the dropdown menus</h3>
+                            <h3 class="mb-3">Customise Your Quiz:</h3>
                         </div>
                         <select class="form-select" id="number-of-questions" aria-label="select number of questions">
                             <option selected>Select Number</option>
@@ -176,6 +176,10 @@
             </div>
         </div>
     </div>
+    <audio id="correct-sound" src="assets/sound/correct.mp3" preload="auto"></audio>
+    <audio id="incorrect-sound" src="assets/sound/incorrect.mp3" preload="auto"></audio>
+    <audio id="complete-sound" src="assets/sound/complete.mp3" preload="auto"></audio>
+
 
     <!-- Results Screen-->
     <div class="container-fluid section" id="results-container">
@@ -222,6 +226,9 @@
 
     <!-- Custom JS-->
     <script src="assets/js/check.js"></script>
+
+    <!-- Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
     <!-- Font Awesome kit -->
     <script src="https://kit.fontawesome.com/9dc22cb057.js" crossorigin="anonymous"></script>

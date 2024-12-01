@@ -17,6 +17,8 @@ const timerElement = document.getElementById("timer");
 const answerButtons = document.querySelectorAll("#button-container .btn");
 const nextButton = document.getElementById("next-button");
 const homeButton = document.getElementById("home-button");
+const correctSound = document.getElementById("correct-sound");
+const incorrectSound = document.getElementById("incorrect-sound");
 
 // Results Screen
 const resultsScreen = document.getElementById("results-container");
@@ -24,6 +26,7 @@ const scoreDisplay = document.getElementById("score");
 const totalQuestionsDisplay = document.getElementById("total-questions");
 const scorePercentageDisplay = document.getElementById("score-percentage");
 const playAgainButton = document.getElementById("play-again-button");
+const completeSound = document.getElementById("complete-sound");
 
 // Declare variables
 let numberOfQuestions = null;
@@ -43,26 +46,26 @@ function updateParameterValue(selectElement, parameterName) {
     if (parameterName === 'numberOfQuestions') {
         numberOfQuestions = (
             selectedValue !== 'Select Number'
-            ? selectedValue
-            : null
+                ? selectedValue
+                : null
         );
     } else if (parameterName === 'category') {
         category = (
             selectedValue !== 'Select Category'
-            ? selectedValue
-            : null
+                ? selectedValue
+                : null
         );
     } else if (parameterName === 'difficulty') {
         difficulty = (
             selectedValue !== 'Select Difficulty'
-            ? selectedValue
-            : null
+                ? selectedValue
+                : null
         );
     } else if (parameterName === 'timer') {
         timer = (
             selectedValue !== 'Select Timer'
-            ? selectedValue
-            : null
+                ? selectedValue
+                : null
         );
     }
 }
@@ -133,7 +136,11 @@ checkDropdowns();
 homeButton.addEventListener("click", showStartScreen);
 
 // Play again button to return to parameters screen and reset variables and parameters.
-playAgainButton.addEventListener("click", showStartScreen);
+playAgainButton.addEventListener("click", function () {
+    completeSound.pause();
+    completeSound.currentTime = 0;
+    showStartScreen();
+});
 
 // Fetch questions from API
 function fetchAndDisplayQuestions() {
@@ -192,8 +199,10 @@ function displayQuestion(index) {
             if (answer === questionData.correct_answer) {
                 button.style.backgroundColor = "#B8D8BE";
                 score += 1;
+                correctSound.play();
             } else {
                 button.style.backgroundColor = "#ff9e99";
+                incorrectSound.play();
             }
             allButtons.forEach(function (btn) {
                 if (btn.textContent === decodeHtmlEntities(questionData.correct_answer)) {
@@ -209,7 +218,7 @@ function displayQuestion(index) {
 
 // Call the fetchAndDisplayQuestions function when the parameter start button is clicked
 parameterStartButton.addEventListener("click", fetchAndDisplayQuestions);
-parameterStartButton.addEventListener('click', updateProgressTracker);
+parameterStartButton.addEventListener("click", updateProgressTracker);
 
 // Initially, hide the Next button
 nextButton.style.display = "none";
@@ -236,6 +245,10 @@ nextButton.addEventListener("click", goToNextQuestion);
 function goToNextQuestion() {
     clearInterval(countdown);
     currentQuestionIndex += 1;
+    correctSound.pause();
+    correctSound.currentTime = 0;
+    incorrectSound.pause();
+    incorrectSound.currentTime = 0;
     updateProgressTracker();
     if (currentQuestionIndex < questions.length) {
         displayQuestion(currentQuestionIndex);
@@ -247,12 +260,14 @@ function goToNextQuestion() {
 
 // Function to display the results
 function displayResults() {
+    completeSound.play();
     const scorePercentage = Math.round((score / numberOfQuestions) * 100);
     scoreDisplay.textContent = score;
     totalQuestionsDisplay.textContent = numberOfQuestions;
     scorePercentageDisplay.textContent = scorePercentage;
     quizQuestionScreen.style.display = "none";
     resultsScreen.style.display = "flex";
+    launchConfetti();
 }
 
 // Function to start the timer
@@ -282,4 +297,24 @@ function handleTimeout() {
         }
     });
     nextButton.style.display = "inline-block";
+}
+
+function launchConfetti() {
+    const duration = 3 * 1000; 
+    const end = Date.now() + duration;
+
+    (function frame() {
+        confetti({
+            particleCount: 15,
+            angle: Math.random() * 360,
+            spread: 55,
+            origin: { x: Math.random(), y: Math.random() - 0.2 },
+            scalar: 1,
+            shapes: ['circle'],
+        });
+
+        if (Date.now() < end) {
+            requestAnimationFrame(frame);
+        }
+    })();
 }

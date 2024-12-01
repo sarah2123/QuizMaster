@@ -103,7 +103,8 @@ h1 {
 
 .toast-body {
     background-color: var(--tertiary-color);
-    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 /* Quiz Parameters Screen */
@@ -247,4 +248,9 @@ div #logo {
     .card {
         width: 600px;
     }
+}
+
+
+.form-select {
+    max-height: 150px
 }

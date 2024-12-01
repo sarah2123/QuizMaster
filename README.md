@@ -5,8 +5,8 @@
 </p>
 
 ## Project Overview
-### Introduction
-Welcome to **QuizMaster**, a dynamic and engaging quiz platform designed to entertain, educate, and challenge users of all ages. QuizMaster allows users to customize their quiz experience by selecting the number of questions, categories like general knowledge or geography, difficulty levels, and time limits, making it versatile for both casual users and avid quiz enthusiasts.
+### Introduction / Rationale
+Welcome to **QuizMaster**, a dynamic and engaging quiz platform designed to entertain, educate, and challenge users of all ages. Many online quizzes lack visual appeal, often featuring outdated layouts and uninspired designs. QuizMaster breaks the mold with a modern, sleek interface that captivates users from the moment they arrive. QuizMaster allows users to customize their quiz experience by selecting the number of questions, categories like general knowledge or geography, difficulty levels, and time limits, making it versatile for both casual users and avid quiz enthusiasts.
 
 This platform aims to provide an enjoyable way to test and expand knowledge while catering to diverse interests and learning preferences. By offering immediate feedback on answers, tracking progress, and displaying results, QuizMaster serves as both an educational tool and a source of entertainment. Whether you're looking to learn something new, practice for a trivia night, or just have fun, QuizMaster is the ideal companion. With a clean, responsive design powered by Bootstrap and dynamic question content from an API, this quiz application ensures a seamless and enriching experience for everyone.
 ### Site Goals
@@ -85,7 +85,7 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
   - **Responsiveness:** The button is in the middle on larger screens and to the right on smaller screens so it's easier to access.
   - **Value to user:**  Encourages thoughtful interaction by requiring users to select an answer before moving on, enhancing the overall learning experience.
 
-**Result Screen**
+**Results Screen**
 
   ![Result Screen](/assets/media/ResultsScreen.png)
 - **Display Final Score**
@@ -101,16 +101,18 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 ### Added Features
 - Home button to allow users to exit whilst in a quiz.
 - Toast notification when there's an error fetching questions or there's no questions matching selected parameters.
-- True/False questions.
+- True/False questions to ensure there's enough questions for each category.
 - Extended number of categories.
+- Added sound effects depending on if answer is correct or incorrect.
+- Added sound effects and confetti to results screen.
+
 
 ### Future Features
 - Allow users to review their answers after the quiz.
 - A leaderboard to show top scores.
 - Allow users to save their progress and resume later.
-- Allow users to share their results and provide feedback.
+- Allow users to share their results.
 - Reward users with bonus points for streaks or quick answers.
-- Add sound effects or background music.
 - Add badges or achievements.
 - Add new timer modes for variety (e.g. Sudden Death: One incorrect answer ends the quiz.).
 - Allow user to enter name and use throughout quiz to make it more personalised.
@@ -219,6 +221,8 @@ Many online quizzes lack visual appeal, often featuring outdated layouts and uni
 
 ![Colour Scheme](/assets/media/Colors.png)
 
+## Agile Development
+
 ## Technologies Used
 - <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank">HTML5</a>
 - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS3</a> 
@@ -227,20 +231,24 @@ Many online quizzes lack visual appeal, often featuring outdated layouts and uni
 - <a href="https://git-scm.com/" target="_blank">Git</a> 
 - <a href="https://github.com/" target="_blank">Github</a>
 - <a href="https://www.gitpod.io/" target="_blank">Gitpod</a> 
-- <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
-- <a href="https://balsamiq.com/" target="_blank">Balsamiq</a>
-- <a href="https://favicon.io/" target="_blank">favicon.io</a>
-- <a href="https://coolors.co/" target="_blank">Coolors</a>
-- <a href="https://developer.chrome.com/docs/devtools" target="_blank">Chrome DevTools</a> 
-- <a href="https://validator.w3.org/" target="_blank">W3C HTML Validator</a>
-- <a href="https://jigsaw.w3.org/css-validator/validator" target="_blank">Jigsaw CSS Validator</a>
-- <a href="https://www.jslint.com/" target="_blank">JSLint Javascript Validator</a>
-- <a href="https://jshint.com/" target="_blank">JSHint Javascript Validator</a>
+- <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> - Icons
+- <a href="https://balsamiq.com/" target="_blank">Balsamiq</a> - Wireframes
+- <a href="https://favicon.io/" target="_blank">favicon.io</a> - Favicon
+- <a href="https://coolors.co/" target="_blank">Coolors</a> - Colour Palette
+- <a href="https://developer.chrome.com/docs/devtools" target="_blank">Chrome DevTools</a> - Check for Bugs
+- <a href="https://validator.w3.org/" target="_blank">W3C HTML Validator</a> - Validate HTML
+- <a href="https://jigsaw.w3.org/css-validator/validator" target="_blank">Jigsaw CSS Validator</a> - Validate CSS
+- <a href="https://www.jslint.com/" target="_blank">JSLint Javascript Validator</a> - Validate JavaScript
+- <a href="https://jshint.com/" target="_blank">JSHint Javascript Validator</a> - Validate Javascript
 - <a href="https://developer.chrome.com/docs/lighthouse/overview" target="_blank">Chrome Lighthouse</a>
-- <a href="https://webaim.org/" target="_blank">WebAim</a>
-- <a href="https://ui.dev/amiresponsive?" target="_blank">Am I Responsive?</a>
-- <a href="https://www.browserling.com/" target="_blank">Browserling</a>
-- <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
+- <a href="https://webaim.org/" target="_blank">WebAim</a> - WCAG Contrast Checker
+- <a href="https://ui.dev/amiresponsive?" target="_blank">Am I Responsive?</a> - Responsive Mockup
+- <a href="https://www.browserling.com/" target="_blank">Browserling</a> - Browser Testing
+- <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> - Fonts
+- <a href="https://mixkit.co/free-sound-effects/" target="_blank">mixkit</a> - Sound Effects
+- <a href="https://cloudconvert.com/" target="_blank">CloudConvert</a> - File Converter
+- <a href="https://github.com/catdad/canvas-confetti#api" target="_blank">Canvas Confetti</a> - Canvas Confetti
+- <a href="https://pixabay.com/sound-effects/" target="_blank">pixabay</a> - Sound Effects
 
 ## Deployment
 - The site was deployed to GitHub pages. The steps to deploy are as follows: 
