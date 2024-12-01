@@ -1,7 +1,7 @@
 # QuizMaster
 ![Homepage banner](/assets/media/banner.png)
 <p align="center">
-    <a href="" target="_blank">Deployed Project Link</a>
+    <a href="https://sarah2123.github.io/QuizMaster/" target="_blank">Deployed Project Link</a>
 </p>
 
 ## Project Overview
@@ -248,13 +248,22 @@ Many online quizzes lack visual appeal, often featuring outdated layouts and uni
   - From the branch section, use the dropdown menu to select the 'main' branch.
   - From the next drop-down menu select 'root', then  click save.
   - Wait a few minutes and refresh your page and the deployed link should be available.
-- The live link can be found here - 
+- The live link can be found here - https://sarah2123.github.io/QuizMaster/
 
 ## Testing
 ### HTML
+
+![HTML Validation](/assets/media/html.png)
 ### CSS
+
+![CSS Validation](/assets/media/css.png)
 ### JavaScript
+
+![JS Validation](/assets/media/jslint.png)
+![JS Validation](/assets/media/jshint.png)
 ### Lighthouse 
+
+![Lighthouse Validation](/assets/media/lighthouse.png)
 ### WCAG Contrast Checker
 ### Browser Testing
 ### Responsiveness Testing

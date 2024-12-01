@@ -14,7 +14,6 @@ const parameterStartButton = document.getElementById("parameter-start-button");
 const quizQuestionScreen = document.getElementById("quiz-question-container");
 const progressTracker = document.getElementById("progress-tracker");
 const timerElement = document.getElementById("timer");
-const questionText = document.getElementById("question");
 const answerButtons = document.querySelectorAll("#button-container .btn");
 const nextButton = document.getElementById("next-button");
 const homeButton = document.getElementById("home-button");
