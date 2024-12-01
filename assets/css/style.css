@@ -93,6 +93,18 @@ h1 {
     padding: 10px 20px;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center; 
+}
+
+.button-container .btn {
+    flex: 1 1 auto; 
+    max-width: 200px;
+}
+
 #howToPlayModal .modal-content {
     background-color: var(--tertiary-color);
 }
@@ -210,8 +222,9 @@ div #logo {
     #parameter-start-button,
     #next-button,
     #play-again-button,
+    #quick-play-button,
     #howToPlayModal button {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     #quiz-parameters-container select {
@@ -248,9 +261,4 @@ div #logo {
     .card {
         width: 600px;
     }
-}
-
-
-.form-select {
-    max-height: 150px
 }

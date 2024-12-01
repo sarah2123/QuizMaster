@@ -105,6 +105,7 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 - Extended number of categories.
 - Added sound effects depending on if answer is correct or incorrect.
 - Added sound effects and confetti to results screen.
+- Added a quickplay feature that generates 10 random questions with a 20 second time limit.
 
 
 ### Future Features
@@ -117,7 +118,6 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 - Add new timer modes for variety (e.g. Sudden Death: One incorrect answer ends the quiz.).
 - Allow user to enter name and use throughout quiz to make it more personalised.
 - Add a contact form for users to report bugs.
-- Allow a quick play mode where users select the number of questions and random questions are generated.
 
 ## Project Planning - UX/UI
 ### User Stories
