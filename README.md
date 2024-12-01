@@ -101,6 +101,8 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 ### Added Features
 - Home button to allow users to exit whilst in a quiz.
 - Toast notification when there's an error fetching questions or there's no questions matching selected parameters.
+- True/False questions.
+- Extended number of categories.
 
 ### Future Features
 - Allow users to review their answers after the quiz.
@@ -113,6 +115,7 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 - Add new timer modes for variety (e.g. Sudden Death: One incorrect answer ends the quiz.).
 - Allow user to enter name and use throughout quiz to make it more personalised.
 - Add a contact form for users to report bugs.
+- Allow a quick play mode where users select the number of questions and random questions are generated.
 
 ## Project Planning - UX/UI
 ### User Stories
