@@ -11,6 +11,7 @@ const timerSelect = document.getElementById("timer-for-questions");
 const parameterStartButton = document.getElementById("parameter-start-button");
 
 // Quiz Question Screen
+const loadingScreen = document.getElementById("loading-screen");
 const quizQuestionScreen = document.getElementById("quiz-question-container");
 const progressTracker = document.getElementById("progress-tracker");
 const timerElement = document.getElementById("timer");
@@ -144,6 +145,8 @@ playAgainButton.addEventListener("click", function () {
 
 // Fetch questions from API
 function fetchAndDisplayQuestions() {
+    quizParametersScreen.style.display = "none";
+    loadingScreen.style.display = "flex";
     const apiURL = `https://opentdb.com/api.php?amount=${numberOfQuestions}&category=${category}&difficulty=${difficulty}`;
 
     fetch(apiURL).then(function (response) {
@@ -154,8 +157,10 @@ function fetchAndDisplayQuestions() {
     }).then(function (data) {
         if (data.results && data.results.length > 0) {
             questions = data.results;
+            loadingScreen.style.display = "none";
             quizParametersScreen.style.display = 'none';
             quizQuestionScreen.style.display = 'flex';
+            nextButton.style.display = "none";
             displayQuestion(currentQuestionIndex);
         } else {
             throw new Error("Not enough questions available! Please adjust your parameters.");

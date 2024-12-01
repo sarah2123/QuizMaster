@@ -7,21 +7,22 @@ quickPlayButton.addEventListener("click", startQuickPlay);
 quickPlayButton.addEventListener("click", updateProgressTracker);
 
 function startQuickPlay() {
+    startScreen.style.display = "none";
+    loadingScreen.style.display = "flex";
     const apiURL = `https://opentdb.com/api.php?amount=10`;
 
     fetch(apiURL).then(function (response) {
         if (!response.ok) {
-            throw new Error("Failed to fetch questions from the API");
+            throw new Error("Failed to fetch questions from the API, please try again.");
         }
         return response.json();
     }).then(function (data) {
         if (data.results && data.results.length > 0) {
             questions = data.results;
+            loadingScreen.style.display = "none";
             startScreen.style.display = 'none';
             quizQuestionScreen.style.display = 'flex';
             displayQuestion(currentQuestionIndex);
-        } else {
-            throw new Error("Not enough questions available! Please adjust your parameters.");
         }
     }).catch(function (error) {
         console.error("Error fetching quiz questions:", error);
@@ -29,7 +30,7 @@ function startQuickPlay() {
         errorToastMessage.textContent = error.message || "An error occurred while fetching questions.";
         const errorToast = new bootstrap.Toast(document.getElementById("errorToast"));
         errorToast.show();
-        quizParametersScreen.style.display = 'flex';
+        startScreen.style.display = 'flex';
         quizQuestionScreen.style.display = 'none';
     });
 }

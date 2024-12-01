@@ -180,8 +180,7 @@
     <audio id="correct-sound" src="assets/sound/correct.mp3" preload="auto"></audio>
     <audio id="incorrect-sound" src="assets/sound/incorrect.mp3" preload="auto"></audio>
     <audio id="complete-sound" src="assets/sound/complete.mp3" preload="auto"></audio>
-
-
+    
     <!-- Results Screen-->
     <div class="container-fluid section" id="results-container">
         <div class="row">
@@ -216,6 +215,24 @@
             </div>
             <div class="toast-body" id="errorToastMessage">
                 An error occurred.
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen-->
+    <div class="container-fluid section" id="loading-screen">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body vh-100 d-flex justify-content-center align-items-center">
+                        <div class="text-center">
+                            <h2 class="mb-3"><i class="fa-solid fa-crown"></i>QuizMaster</h2>
+                            <div class="spinner-border" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

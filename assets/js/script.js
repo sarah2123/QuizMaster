@@ -46,26 +46,26 @@ function updateParameterValue(selectElement, parameterName) {
     if (parameterName === 'numberOfQuestions') {
         numberOfQuestions = (
             selectedValue !== 'Select Number'
-                ? selectedValue
-                : null
+            ? selectedValue
+            : null
         );
     } else if (parameterName === 'category') {
         category = (
             selectedValue !== 'Select Category'
-                ? selectedValue
-                : null
+            ? selectedValue
+            : null
         );
     } else if (parameterName === 'difficulty') {
         difficulty = (
             selectedValue !== 'Select Difficulty'
-                ? selectedValue
-                : null
+            ? selectedValue
+            : null
         );
     } else if (parameterName === 'timer') {
         timer = (
             selectedValue !== 'Select Timer'
-                ? selectedValue
-                : null
+            ? selectedValue
+            : null
         );
     }
 }
@@ -300,21 +300,23 @@ function handleTimeout() {
 }
 
 function launchConfetti() {
-    const duration = 1 * 1000; 
+    const duration = 1 * 1000;
     const end = Date.now() + duration;
 
-    (function frame() {
+    function frame() {
         confetti({
-            particleCount: 15,
             angle: Math.random() * 360,
-            spread: 55,
-            origin: { x: Math.random(), y: Math.random() - 0.2 },
+            origin: {x: Math.random(), y: Math.random() - 0.2},
+            particleCount: 15,
             scalar: 1,
             shapes: ['circle'],
+            spread: 55
         });
 
         if (Date.now() < end) {
             requestAnimationFrame(frame);
         }
-    })();
+    }
+
+    frame();
 }
