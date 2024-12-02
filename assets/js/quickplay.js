@@ -10,6 +10,7 @@ nextButton.style.display = "none";
 
 function startQuickPlay() {
     timer = 20;
+    numberOfQuestions = 10;
     startScreen.style.display = "none";
     loadingScreen.style.display = "flex";
     const apiURL = `https://opentdb.com/api.php?amount=10`;
