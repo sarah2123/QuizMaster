@@ -24,6 +24,7 @@ function startQuickPlay() {
         if (data.results && data.results.length > 0) {
             questions = data.results;
             loadingScreen.style.display = "none";
+            nextButton.style.display = "none";
             startScreen.style.display = 'none';
             quizQuestionScreen.style.display = 'flex';
             displayQuestion(currentQuestionIndex);
