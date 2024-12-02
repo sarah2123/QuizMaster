@@ -11,13 +11,15 @@ const timerSelect = document.getElementById("timer-for-questions");
 const parameterStartButton = document.getElementById("parameter-start-button");
 
 // Quiz Question Screen
+const loadingScreen = document.getElementById("loading-screen");
 const quizQuestionScreen = document.getElementById("quiz-question-container");
 const progressTracker = document.getElementById("progress-tracker");
 const timerElement = document.getElementById("timer");
-const questionText = document.getElementById("question");
 const answerButtons = document.querySelectorAll("#button-container .btn");
 const nextButton = document.getElementById("next-button");
 const homeButton = document.getElementById("home-button");
+const correctSound = document.getElementById("correct-sound");
+const incorrectSound = document.getElementById("incorrect-sound");
 
 // Results Screen
 const resultsScreen = document.getElementById("results-container");
@@ -25,6 +27,7 @@ const scoreDisplay = document.getElementById("score");
 const totalQuestionsDisplay = document.getElementById("total-questions");
 const scorePercentageDisplay = document.getElementById("score-percentage");
 const playAgainButton = document.getElementById("play-again-button");
+const completeSound = document.getElementById("complete-sound");
 
 // Declare variables
 let numberOfQuestions = null;
@@ -134,11 +137,17 @@ checkDropdowns();
 homeButton.addEventListener("click", showStartScreen);
 
 // Play again button to return to parameters screen and reset variables and parameters.
-playAgainButton.addEventListener("click", showStartScreen);
+playAgainButton.addEventListener("click", function () {
+    completeSound.pause();
+    completeSound.currentTime = 0;
+    showStartScreen();
+});
 
 // Fetch questions from API
 function fetchAndDisplayQuestions() {
-    const apiURL = `https://opentdb.com/api.php?amount=${numberOfQuestions}&category=${category}&difficulty=${difficulty}&type=multiple`;
+    quizParametersScreen.style.display = "none";
+    loadingScreen.style.display = "flex";
+    const apiURL = `https://opentdb.com/api.php?amount=${numberOfQuestions}&category=${category}&difficulty=${difficulty}`;
 
     fetch(apiURL).then(function (response) {
         if (!response.ok) {
@@ -148,8 +157,10 @@ function fetchAndDisplayQuestions() {
     }).then(function (data) {
         if (data.results && data.results.length > 0) {
             questions = data.results;
+            loadingScreen.style.display = "none";
             quizParametersScreen.style.display = 'none';
             quizQuestionScreen.style.display = 'flex';
+            nextButton.style.display = "none";
             displayQuestion(currentQuestionIndex);
         } else {
             throw new Error("Not enough questions available! Please adjust your parameters.");
@@ -193,8 +204,10 @@ function displayQuestion(index) {
             if (answer === questionData.correct_answer) {
                 button.style.backgroundColor = "#B8D8BE";
                 score += 1;
+                correctSound.play();
             } else {
                 button.style.backgroundColor = "#ff9e99";
+                incorrectSound.play();
             }
             allButtons.forEach(function (btn) {
                 if (btn.textContent === decodeHtmlEntities(questionData.correct_answer)) {
@@ -210,7 +223,7 @@ function displayQuestion(index) {
 
 // Call the fetchAndDisplayQuestions function when the parameter start button is clicked
 parameterStartButton.addEventListener("click", fetchAndDisplayQuestions);
-parameterStartButton.addEventListener('click', updateProgressTracker);
+parameterStartButton.addEventListener("click", updateProgressTracker);
 
 // Initially, hide the Next button
 nextButton.style.display = "none";
@@ -237,6 +250,10 @@ nextButton.addEventListener("click", goToNextQuestion);
 function goToNextQuestion() {
     clearInterval(countdown);
     currentQuestionIndex += 1;
+    correctSound.pause();
+    correctSound.currentTime = 0;
+    incorrectSound.pause();
+    incorrectSound.currentTime = 0;
     updateProgressTracker();
     if (currentQuestionIndex < questions.length) {
         displayQuestion(currentQuestionIndex);
@@ -248,12 +265,14 @@ function goToNextQuestion() {
 
 // Function to display the results
 function displayResults() {
+    completeSound.play();
     const scorePercentage = Math.round((score / numberOfQuestions) * 100);
     scoreDisplay.textContent = score;
     totalQuestionsDisplay.textContent = numberOfQuestions;
     scorePercentageDisplay.textContent = scorePercentage;
     quizQuestionScreen.style.display = "none";
     resultsScreen.style.display = "flex";
+    launchConfetti();
 }
 
 // Function to start the timer
@@ -283,4 +302,26 @@ function handleTimeout() {
         }
     });
     nextButton.style.display = "inline-block";
+}
+
+function launchConfetti() {
+    const duration = 1 * 1000;
+    const end = Date.now() + duration;
+
+    function frame() {
+        confetti({
+            angle: Math.random() * 360,
+            origin: {x: Math.random(), y: Math.random() - 0.2},
+            particleCount: 15,
+            scalar: 1,
+            shapes: ['circle'],
+            spread: 55
+        });
+
+        if (Date.now() < end) {
+            requestAnimationFrame(frame);
+        }
+    }
+
+    frame();
 }

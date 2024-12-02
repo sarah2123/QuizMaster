@@ -1,12 +1,12 @@
 # QuizMaster
 ![Homepage banner](/assets/media/banner.png)
 <p align="center">
-    <a href="" target="_blank">Deployed Project Link</a>
+    <a href="https://sarah2123.github.io/QuizMaster/" target="_blank">Deployed Project Link</a>
 </p>
 
 ## Project Overview
-### Introduction
-Welcome to **QuizMaster**, a dynamic and engaging quiz platform designed to entertain, educate, and challenge users of all ages. QuizMaster allows users to customize their quiz experience by selecting the number of questions, categories like general knowledge or geography, difficulty levels, and time limits, making it versatile for both casual users and avid quiz enthusiasts.
+### Introduction / Rationale
+Welcome to **QuizMaster**, a dynamic and engaging quiz platform designed to entertain, educate, and challenge users of all ages. Many online quizzes lack visual appeal, often featuring outdated layouts and uninspired designs. QuizMaster breaks the mold with a modern, sleek interface that captivates users from the moment they arrive. QuizMaster allows users to customize their quiz experience by selecting the number of questions, categories like general knowledge or geography, difficulty levels, and time limits, making it versatile for both casual users and avid quiz enthusiasts.
 
 This platform aims to provide an enjoyable way to test and expand knowledge while catering to diverse interests and learning preferences. By offering immediate feedback on answers, tracking progress, and displaying results, QuizMaster serves as both an educational tool and a source of entertainment. Whether you're looking to learn something new, practice for a trivia night, or just have fun, QuizMaster is the ideal companion. With a clean, responsive design powered by Bootstrap and dynamic question content from an API, this quiz application ensures a seamless and enriching experience for everyone.
 ### Site Goals
@@ -85,7 +85,7 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
   - **Responsiveness:** The button is in the middle on larger screens and to the right on smaller screens so it's easier to access.
   - **Value to user:**  Encourages thoughtful interaction by requiring users to select an answer before moving on, enhancing the overall learning experience.
 
-**Result Screen**
+**Results Screen**
 
   ![Result Screen](/assets/media/ResultsScreen.png)
 - **Display Final Score**
@@ -101,14 +101,20 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 ### Added Features
 - Home button to allow users to exit whilst in a quiz.
 - Toast notification when there's an error fetching questions or there's no questions matching selected parameters.
+- True/False questions to ensure there's enough questions for each category.
+- Extended number of categories.
+- Added sound effects depending on if answer is correct or incorrect.
+- Added sound effects and confetti to results screen.
+- Added a quickplay feature that generates 10 random questions with a 20 second time limit.
+- Added a loading screen.
+
 
 ### Future Features
 - Allow users to review their answers after the quiz.
 - A leaderboard to show top scores.
 - Allow users to save their progress and resume later.
-- Allow users to share their results and provide feedback.
+- Allow users to share their results.
 - Reward users with bonus points for streaks or quick answers.
-- Add sound effects or background music.
 - Add badges or achievements.
 - Add new timer modes for variety (e.g. Sudden Death: One incorrect answer ends the quiz.).
 - Allow user to enter name and use throughout quiz to make it more personalised.
@@ -216,6 +222,13 @@ Many online quizzes lack visual appeal, often featuring outdated layouts and uni
 
 ![Colour Scheme](/assets/media/Colors.png)
 
+## Agile Development
+- We completed all tasks on the project board.
+- 60% of the tasks were must haves.
+- We had time left to add additional features.
+
+![Kanban Board](/assets/media/projectBoard.png)
+
 ## Technologies Used
 - <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank">HTML5</a>
 - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS3</a> 
@@ -224,20 +237,24 @@ Many online quizzes lack visual appeal, often featuring outdated layouts and uni
 - <a href="https://git-scm.com/" target="_blank">Git</a> 
 - <a href="https://github.com/" target="_blank">Github</a>
 - <a href="https://www.gitpod.io/" target="_blank">Gitpod</a> 
-- <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
-- <a href="https://balsamiq.com/" target="_blank">Balsamiq</a>
-- <a href="https://favicon.io/" target="_blank">favicon.io</a>
-- <a href="https://coolors.co/" target="_blank">Coolors</a>
-- <a href="https://developer.chrome.com/docs/devtools" target="_blank">Chrome DevTools</a> 
-- <a href="https://validator.w3.org/" target="_blank">W3C HTML Validator</a>
-- <a href="https://jigsaw.w3.org/css-validator/validator" target="_blank">Jigsaw CSS Validator</a>
-- <a href="https://www.jslint.com/" target="_blank">JSLint Javascript Validator</a>
-- <a href="https://jshint.com/" target="_blank">JSHint Javascript Validator</a>
+- <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> - Icons
+- <a href="https://balsamiq.com/" target="_blank">Balsamiq</a> - Wireframes
+- <a href="https://favicon.io/" target="_blank">favicon.io</a> - Favicon
+- <a href="https://coolors.co/" target="_blank">Coolors</a> - Colour Palette
+- <a href="https://developer.chrome.com/docs/devtools" target="_blank">Chrome DevTools</a> - Check for Bugs
+- <a href="https://validator.w3.org/" target="_blank">W3C HTML Validator</a> - Validate HTML
+- <a href="https://jigsaw.w3.org/css-validator/validator" target="_blank">Jigsaw CSS Validator</a> - Validate CSS
+- <a href="https://www.jslint.com/" target="_blank">JSLint Javascript Validator</a> - Validate JavaScript
+- <a href="https://jshint.com/" target="_blank">JSHint Javascript Validator</a> - Validate Javascript
 - <a href="https://developer.chrome.com/docs/lighthouse/overview" target="_blank">Chrome Lighthouse</a>
-- <a href="https://webaim.org/" target="_blank">WebAim</a>
-- <a href="https://ui.dev/amiresponsive?" target="_blank">Am I Responsive?</a>
-- <a href="https://www.browserling.com/" target="_blank">Browserling</a>
-- <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
+- <a href="https://webaim.org/" target="_blank">WebAim</a> - WCAG Contrast Checker
+- <a href="https://ui.dev/amiresponsive?" target="_blank">Am I Responsive?</a> - Responsive Mockup
+- <a href="https://www.browserling.com/" target="_blank">Browserling</a> - Browser Testing
+- <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> - Fonts
+- <a href="https://mixkit.co/free-sound-effects/" target="_blank">mixkit</a> - Sound Effects
+- <a href="https://cloudconvert.com/" target="_blank">CloudConvert</a> - File Converter
+- <a href="https://github.com/catdad/canvas-confetti#api" target="_blank">Canvas Confetti</a> - Canvas Confetti
+- <a href="https://pixabay.com/sound-effects/" target="_blank">pixabay</a> - Sound Effects
 
 ## Deployment
 - The site was deployed to GitHub pages. The steps to deploy are as follows: 
@@ -248,22 +265,66 @@ Many online quizzes lack visual appeal, often featuring outdated layouts and uni
   - From the branch section, use the dropdown menu to select the 'main' branch.
   - From the next drop-down menu select 'root', then  click save.
   - Wait a few minutes and refresh your page and the deployed link should be available.
-- The live link can be found here - 
+- The live link can be found here - https://sarah2123.github.io/QuizMaster/
 
 ## Testing
 ### HTML
-### CSS
-### JavaScript
-### Lighthouse 
-### WCAG Contrast Checker
-### Browser Testing
-### Responsiveness Testing
-### Known Bugs
 
+![HTML Validation](/assets/media/html.png)
+### CSS
+
+![CSS Validation](/assets/media/css.png)
+### JavaScript
+
+![JS Validation](/assets/media/jslint.png)
+### Lighthouse 
+
+![Lighthouse Validation](/assets/media/lighthouse.png)
+### WCAG Contrast Checker
+
+![Contrast Check](/assets/media/contrast.png)
+### Browser Testing
+- Chrome
+- Firefox
+- Safari 
+- Edge
+### Responsiveness Testing
+- Responsive on screens from 320px to 1920px
+### Known Bugs
+**Solved Bugs**
+  - **Problem:** Quiz Questions from API having random characters.
+    - **Solution:** Use Javascript to decode html entities before displaying questions.
+  - **Problem:** Timer element not stopping once answer selected.
+    - **Solution:** Clear interval when answer is selected so it can no longer count down.
+  - **Problem:** Error fetching questions when there was not enough questions within given parameters.
+    - **Solution:** Allow true/false questions and display toast when error occurs asking user to change parameters.
+  - **Problem:** Sound not playing when consecutive questions answered too fast.
+    - **Solution:** Sound continued playing after clicking next, so ended and restarted sound when clicking next.
+  - **Problem:** Questions counting up in 2.
+    - **Solution:** Same function was being called twice so removed one.
+  - **Problem:** If you entered the quickplay then exited and entered again, it would throw an error "failed to fetch questions from API".
+    - **Solution:** This was because the previous API fetch was still occuring so added a loading screen to wait for that one to end and the new fetch to occur.
+  - **Problem:** Next button displaying on first question.
+    - **Solution:**  This was because the next button displayed before the function to check if it should be displayed after answering questions. So set the default to the next button not being displayed.
 ## Credits
 ### Content
-- Chatgpt
-- open trivia database
+- Open Trivia Database
 ### Media
-### Acknowledgements
+- pixabay
+- mixkit
 ## AI Usage
+This project heavily relied on ChatGPT to streamline various stages of development. 
+- Project Planning
+  - Assisted in outlining the project scope and breaking down the functionality into smaller, actionable tasks.
+  - Generated a high-level roadmap, including user stories and feature prioritization.
+  - Assisted in ideas for features to implement.
+- Development
+  - Helped write boilerplate code for various components, such as dynamic screen navigation and event listeners for user interaction.
+  - Suggested improvements in JavaScript for handling asynchronous operations (e.g., API calls).
+  - Provided broken down logic on how to implement a feature.
+- Debugging
+  - Troubleshot bugs during the development process.
+  - Found errors in the code that led to bugs.
+  - Helped fix errors that showed up on JS lint.
+- Documentation
+  - API helped with most the documentation particularly the UX essentials.
