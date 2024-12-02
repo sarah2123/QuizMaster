@@ -17,7 +17,7 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 - Incorporate accessibility features to make the platform usable for a wide audience.
 - Use dynamic data from an API to deliver fresh and varied quiz content.
 ### Mobile / Tablet / Desktop View
-![Responsive Mockup](/media/responsive-mockup.png)
+![Responsive Mockup](/assets/media/responsive.png)
 
 ## Features
 ### Existing Features
