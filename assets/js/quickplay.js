@@ -6,7 +6,10 @@ timer = 20;
 quickPlayButton.addEventListener("click", startQuickPlay);
 quickPlayButton.addEventListener("click", updateProgressTracker);
 
+nextButton.style.display = "none";
+
 function startQuickPlay() {
+    timer = 20;
     startScreen.style.display = "none";
     loadingScreen.style.display = "flex";
     const apiURL = `https://opentdb.com/api.php?amount=10`;
