@@ -13,7 +13,7 @@ function startQuickPlay() {
 
     fetch(apiURL).then(function (response) {
         if (!response.ok) {
-            throw new Error("Failed to fetch questions from the API, please try again.");
+            startQuickPlay();
         }
         return response.json();
     }).then(function (data) {

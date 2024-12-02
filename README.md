@@ -223,6 +223,11 @@ Many online quizzes lack visual appeal, often featuring outdated layouts and uni
 ![Colour Scheme](/assets/media/Colors.png)
 
 ## Agile Development
+- We completed all tasks on the project board.
+- 60% of the tasks were must haves.
+- We had time left to add additional features.
+
+![Kanban Board](/assets/media/projectBoard.png)
 
 ## Technologies Used
 - <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank">HTML5</a>
@@ -272,19 +277,54 @@ Many online quizzes lack visual appeal, often featuring outdated layouts and uni
 ### JavaScript
 
 ![JS Validation](/assets/media/jslint.png)
-![JS Validation](/assets/media/jshint.png)
 ### Lighthouse 
 
 ![Lighthouse Validation](/assets/media/lighthouse.png)
 ### WCAG Contrast Checker
-### Browser Testing
-### Responsiveness Testing
-### Known Bugs
 
+![Contrast Check](/assets/media/contrast.png)
+### Browser Testing
+- Chrome
+- Firefox
+- Safari 
+- Edge
+### Responsiveness Testing
+- Responsive on screens from 320px to 1920px
+### Known Bugs
+**Solved Bugs**
+  - **Problem:** Quiz Questions from API having random characters.
+    - **Solution:** Use Javascript to decode html entities before displaying questions.
+  - **Problem:** Timer element not stopping once answer selected.
+    - **Solution:** Clear interval when answer is selected so it can no longer count down.
+  - **Problem:** Error fetching questions when there was not enough questions within given parameters.
+    - **Solution:** Allow true/false questions and display toast when error occurs asking user to change parameters.
+  - **Problem:** Sound not playing when consecutive questions answered too fast.
+    - **Solution:** Sound continued playing after clicking next, so ended and restarted sound when clicking next.
+  - **Problem:** Questions counting up in 2.
+    - **Solution:** Same function was being called twice so removed one.
+  - **Problem:** If you entered the quickplay then exited and entered again, it would throw an error "failed to fetch questions from API".
+    - **Solution:** This was because the previous API fetch was still occuring so added a loading screen to wait for that one to end and the new fetch to occur.
+  - **Problem:** Next button displaying on first question.
+    - **Solution:**  This was because the next button displayed before the function to check if it should be displayed after answering questions. So set the default to the next button not being displayed.
 ## Credits
 ### Content
-- Chatgpt
-- open trivia database
+- Open Trivia Database
 ### Media
-### Acknowledgements
+- pixabay
+- mixkit
 ## AI Usage
+This project heavily relied on ChatGPT to streamline various stages of development. 
+- Project Planning
+  - Assisted in outlining the project scope and breaking down the functionality into smaller, actionable tasks.
+  - Generated a high-level roadmap, including user stories and feature prioritization.
+  - Assisted in ideas for features to implement.
+- Development
+  - Helped write boilerplate code for various components, such as dynamic screen navigation and event listeners for user interaction.
+  - Suggested improvements in JavaScript for handling asynchronous operations (e.g., API calls).
+  - Provided broken down logic on how to implement a feature.
+- Debugging
+  - Troubleshot bugs during the development process.
+  - Found errors in the code that led to bugs.
+  - Helped fix errors that showed up on JS lint.
+- Documentation
+  - API helped with most the documentation particularly the UX essentials.
