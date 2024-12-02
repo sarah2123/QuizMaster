@@ -99,11 +99,11 @@ h1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    text-align: center; 
+    text-align: center;
 }
 
 .button-container .btn {
-    flex: 1 1 auto; 
+    flex: 1 1 auto;
     max-width: 200px;
 }
 
@@ -148,6 +148,15 @@ h1 {
 }
 
 /* Quiz Question Screen */
+
+#quiz-question-container h2 {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+#quiz-question-container h3 {
+    font-size: 20px;
+}
 
 #loading-screen {
     display: none;
@@ -245,12 +254,12 @@ div #logo {
         font-size: 16px;
     }
 
-    #question {
+    #quiz-question-container h2 {
         font-size: 20px;
     }
 
-    #progress-tracker {
-        font-size: 18px;
+    #quiz-question-container #progress-tracker {
+        font-size: 16px;
     }
 
     #timer {

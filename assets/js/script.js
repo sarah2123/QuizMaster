@@ -305,7 +305,7 @@ function handleTimeout() {
 }
 
 function launchConfetti() {
-    const duration = 1 * 1000;
+    const duration = 2 * 1000;
     const end = Date.now() + duration;
 
     function frame() {

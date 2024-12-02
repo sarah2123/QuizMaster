@@ -108,7 +108,6 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 - Added a quickplay feature that generates 10 random questions with a 20 second time limit.
 - Added a loading screen.
 
-
 ### Future Features
 - Allow users to review their answers after the quiz.
 - A leaderboard to show top scores.
@@ -232,11 +231,11 @@ Many online quizzes lack visual appeal, often featuring outdated layouts and uni
 ## Technologies Used
 - <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank">HTML5</a>
 - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS3</a> 
-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a> 
-- <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
-- <a href="https://git-scm.com/" target="_blank">Git</a> 
-- <a href="https://github.com/" target="_blank">Github</a>
-- <a href="https://www.gitpod.io/" target="_blank">Gitpod</a> 
+- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a> - Programming Language
+- <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> - CSS Framework
+- <a href="https://git-scm.com/" target="_blank">Git</a> - Version Control
+- <a href="https://github.com/" target="_blank">Github</a> - Repository and Deployment
+- <a href="https://www.gitpod.io/" target="_blank">Gitpod</a> - Cloud IDE
 - <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> - Icons
 - <a href="https://balsamiq.com/" target="_blank">Balsamiq</a> - Wireframes
 - <a href="https://favicon.io/" target="_blank">favicon.io</a> - Favicon
@@ -247,7 +246,7 @@ Many online quizzes lack visual appeal, often featuring outdated layouts and uni
 - <a href="https://www.jslint.com/" target="_blank">JSLint Javascript Validator</a> - Validate JavaScript
 - <a href="https://jshint.com/" target="_blank">JSHint Javascript Validator</a> - Validate Javascript
 - <a href="https://developer.chrome.com/docs/lighthouse/overview" target="_blank">Chrome Lighthouse</a>
-- <a href="https://webaim.org/" target="_blank">WebAim</a> - WCAG Contrast Checker
+- <a href="https://webaim.org/" target="_blank">WebAim</a> - WCAG Contrast Checker / WAVE Accessibility Checker
 - <a href="https://ui.dev/amiresponsive?" target="_blank">Am I Responsive?</a> - Responsive Mockup
 - <a href="https://www.browserling.com/" target="_blank">Browserling</a> - Browser Testing
 - <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> - Fonts
@@ -277,12 +276,17 @@ Many online quizzes lack visual appeal, often featuring outdated layouts and uni
 ### JavaScript
 
 ![JS Validation](/assets/media/jslint.png)
+![JS Validation](/assets/media/jshint.png)
 ### Lighthouse 
 
 ![Lighthouse Validation](/assets/media/lighthouse.png)
 ### WCAG Contrast Checker
 
 ![Contrast Check](/assets/media/contrast.png)
+### Wave Accessibility Checker
+
+![Accessibility Check](/assets/media/accessibility.png)
+
 ### Browser Testing
 - Chrome
 - Firefox
