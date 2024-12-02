@@ -107,6 +107,7 @@ This platform aims to provide an enjoyable way to test and expand knowledge whil
 - Added sound effects and confetti to results screen.
 - Added a quickplay feature that generates 10 random questions with a 20 second time limit.
 - Added a loading screen.
+- Added a UI element progress bar for the timer as opposed to text.
 
 ### Future Features
 - Allow users to review their answers after the quiz.

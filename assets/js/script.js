@@ -240,7 +240,7 @@ answerButtons.forEach(function (button) {
 
 // Function to update progress tracker
 function updateProgressTracker() {
-    progressTracker.textContent = `Question ${currentQuestionIndex + 1}/${numberOfQuestions}`;
+    progressTracker.textContent = `Question ${currentQuestionIndex + 1} / ${numberOfQuestions}`;
 }
 
 // Add event listener to the Next button
@@ -275,21 +275,27 @@ function displayResults() {
     launchConfetti();
 }
 
-// Function to start the timer
 function startTimer(duration) {
+    timerElement.style.width = "100%";
     timeRemaining = duration;
-    timerElement.textContent = `${timeRemaining}s`;
+    const totalDuration = duration * 1000;
+    const updateInterval = 50;
+    const totalSteps = totalDuration / updateInterval;
+    let currentStep = 0;
     if (countdown) {
         clearInterval(countdown);
     }
     countdown = setInterval(function () {
-        timeRemaining -= 1;
-        timerElement.textContent = `${timeRemaining}`;
-        if (timeRemaining <= 0) {
+        currentStep += 1;
+        const progressPercentage = ((totalSteps - currentStep) / totalSteps) * 100;
+
+        timerElement.style.width = `${progressPercentage}%`;
+        if (currentStep >= totalSteps) {
             clearInterval(countdown);
+            timerElement.style.width = "0%";
             handleTimeout();
         }
-    }, 1000);
+    }, updateInterval);
 }
 
 // Function to handle timeout
@@ -312,7 +318,7 @@ function launchConfetti() {
         confetti({
             angle: Math.random() * 360,
             origin: {x: Math.random(), y: Math.random() - 0.2},
-            particleCount: 15,
+            particleCount: 20,
             scalar: 1,
             shapes: ['circle'],
             spread: 55
