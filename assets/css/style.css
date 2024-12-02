@@ -87,6 +87,10 @@ i {
 
 /* Start Screen */
 
+#howToPlayModal h4 {
+    font-weight: 650;
+}
+
 h1 {
     font-weight: bold;
 }
